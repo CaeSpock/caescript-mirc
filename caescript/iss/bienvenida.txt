@@ -1,0 +1,28 @@
+
+                        CaeScript 6.0
+                          para  mIRC
+               ------------------------------
+
+                 Programado por: CaeSpock
+
+Bienvenidos al mundo de los Scripts para mIRC IRC!
+
+Este software es << FreeWare >>
+Puede utilizarlo por el tiempo que desee, pero por favor, respete y no 
+modifique los datos de autoría.
+
+Se ha instalado satisfactoriamente el Script.
+
+Para ejecutarlo, una vez conectado/a debes teclear:
+         /load -rs caescript.mrc
+(Puedes adicionar esta linea a tu lista de perform).
+
+Cualquier duda o sugerencia que tengas, agradeceré te comuniques 
+mediante la interface disponible en la pagina web.
+
+Saludos y gracias por usar CaeScript
+Disfruta el software!
+
+
+CaeSpock
+http://www.caespock.org/ircsoftware/

@@ -1,0 +1,7 @@
+CaeScript
+---------
+
+En este directorio se instalarán los poemas.
+Parte de este material fue cedido por AlCoss en su gran mayoria.
+TuEres.Poe por Atena_20
+
