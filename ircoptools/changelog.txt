@@ -1,0 +1,285 @@
+2018.07.28: IRCopTools 7.0b2
+  . Changed absolute path references to relative references
+  . Cleaned a bit the code
+2018.07.14: IRCOpTools 7.0b1
+  . Re started coding
+  . Fixed some small coding.
+2014.02.13: IRCopTools 6.0
+  . Release
+2013.06.03: IRCopTools 6.0 - Beta 5
+  . Reduced a lot of extra code
+  . Added popup function for /check nick
+2012.03.27: IRCopTools 6.0 - Beta 4
+  . Added
+    /AIF <- akill for info flooding (sabuse)
+2012.03.12: IRCoptools 6.0 - Beta 3
+  . Separated some SAbuse stuff from the script
+2012.02.05: IRCopTools 6.0 - Beta 2
+  . Small corrections to the window mechanism
+  . Some Typos fixed
+2012.01.30: IRCopTools 6.0 - Beta 1
+  . Added logging of the mass clone operations.
+    It was not possible to capture the output of the dialog windows and to
+    copy paste to an email. So i added this to save all results and operations 
+    to a log file.
+  . Added new configuration fields to fit the below addition.
+    massclone = [0/1] Want to Log Mass/Clone results and operations?
+    massclonelog = File to log Mass/Clone results and operations
+    massclonecw = [0/1] Aditionally open a custom window and show in mIRC
+  . Removed all the "changes" file to a single "changelog.txt"
+  . To avoid problems with CaeScript's installation process, renamed default 
+    configuration file from "default.ini" to "default-ircoptools.ini"
+  . Improved the /cdrones interface adding configurable time and reason.
+2012.01.28: IRCoptools 5.5
+  . Release date
+2012.01.26: IrcopTools 5.5 beta 7
+  . Fixed and re ordered some filters to fit the irssi version
+  . Added filter for ADMIN notices
+  . Changed reference page to http://www.caespock.org/ircsoftware/
+  . Removed most of the Chanserv, NickServ, rootserv, ... secret commands from
+    the popups. We all type anyways :P
+  . Added check so you dont kill, kline or akill yourself in the /mass and 
+    /massr commands :)
+  . Removed the Routing separated window.
+    Everything goes to Network Stuff now, but keeps been loged separatelly
+  . Raw network messages window will only open if there is a Notice or message
+    that didnt pass through any filter. So its just for unknow notices.
+2012.01.25: IrcopTools 5.5 beta 6
+  . Added some protection filters for the /mass and /massr so you dont akill, 
+    kline or makill a oper host.
+2012.01.24: IrcopTools 5.5 beta 5
+  . Fixed some input windows
+2012.01.23: IrcopTools 5.5 beta 4
+  . Fixed /mass and /massr to use the makill command
+2012.01.20: IrcopTools 5.5 beta 3
+  . Updated windowfilter to version 2.0
+  . Added /mass <flags,masks, etc>
+    Mass killer, kliner, akiller based on a /WHO
+    Receives as parameter any flags, masks, etc
+    * Note: The mass kline and mass akill will run on each and every host.
+      This might cousa duplicated klines or akills, but we cant know since
+      the /WHO output might return multiple hosts, etc
+  . Added /massr <flags,masks, etc>
+    Mass killer, kliner, akiller based on a /WHOR <- with regexp
+    Receives as parameter any flags, masks, etc
+    * Note: The mass kline and mass akill will run on each and every host.
+      This might cousa duplicated klines or akills, but we cant know since
+      the /RWHO output might return multiple hosts, etc
+2012.01.15: IrcopTools 5.5 beta 2
+  . Added "Notice to query window if exists" as CaeScript has, to be loaded 
+    in case there is no CaeScript loaded.
+  . Added /cdrones #channel <- will search for drones inside a channel
+  . Added /check nick <nick> support, sending message to actual window
+2012.01.11: IRCopTools 5.5
+    IrcopTools 5.5 beta 1
+  . Fixed
+    Some filters for bahamut 2.0.1
+  . Fixed /Kline
+2012.01.11: IRCopTools 5.5
+    IrcopTools 5.5 beta 1
+  . Fixed
+    Some filters for bahamut 2.0.1
+  . Fixed /Kline
+2010.03.24: IRCopTools 5.0
+  . Release Date
+2010.03.24: IRCopTools 5.0 Beta 1
+  . Fixed:
+    Installation script to fit new mirc format
+  . Changed:
+    Help file to .chm instead of .hlp since its no longer supported
+    in Windows Vista and 7
+2007.07.03: IRCopTools 4.5
+  . Removal of HelpOp sentenses
+  . Fix of oper notices via the server popup.
+  . Added StatServ popups
+2006.09.16: IRCopTools 4.2
+  . Release Date
+2006.07.31: IRCopTools 4.2
+  . Adding support for mIRC 6.2
+2005.10.26: IRCopTools 4.1
+  . Release
+2005.08.14: IRCopTools 4.1 beta 2
+  . Another small improvement of the clone handling functions.
+2005.08.07: IRCopTools 4.1 Beta 1
+  . Improved clone handling for OS notices
+2005.04.24: IRCopTools 4.0
+  . Release
+2005.03.27: IRCopTools 4.0 Beta 4
+  . Added:
+    /afn <- autokill  for trying to use a forbidden nick.
+  . Functions to detect "services-redundant" for globops :)
+2005.03.08: IRCopTools 4.0 Beta 3
+  . Added:
+    /uauth to quickly get an auth code to log into inspiration.*
+  . Updated windowfilter.mrc to version 1.9
+2005.03.06: IRCopTools 4.0 beta 2
+  . Added:
+    windowfilter.mrc <- excelent window filter script by alaskaguy and friends
+2004.11.21: IRCopTools 3.9
+  Relase date
+2004.11.15: IRCopTools 3.9B3
+  . Added:
+    /inspiration <- to go directly to https://inspiration.dal.net/ for DALnet
+  . Minor tweaks
+2004.07.28: IRCopTools 3.9B2
+	. Added functionality in all /acl type akills to set a different akill time and reason
+	  /acl [time in minutes] mask [reason]
+	. Timestamped collisions
+2004.07.25: IRCopTools 3.9B1
+	. Minor tweaks
+	. Addition of:
+	/acl <- akill for nick colliding
+2004.05.20: IRCopTools 3.8
+	. Minor tweaks
+	. Release date
+2004.01.11: IRCopTools 3.7
+	. Minor tweaks
+	. Release date
+2003.12.22: IRCopTools 3.6
+	. Adequated filters for new bahamut 1.4.36
+	. Added sajoin support
+	. Release date :)
+2003.10.13: IRCopTools 3.5
+	. Release date :)
+2003.09.28: IRCoptools 3.5 Release Candidate 4
+	. Minor updates
+2003.09.28: IRCoptools 3.5 Release Candidate 4
+	. Minor updates
+2003.08.30: IRCoptools 3.5 Release Candidate 3
+	. Minor updates
+2003.08.02: IRCoptools 3.5 Release Candidate 2
+	. Added:
+	. /anc -> Akill for nick chasing
+	. Nick Collision detection system
+	. /collisions <- to enable
+	. /collisionsoff <- to disable
+2003.03.04: IRCopTools 3.5 Release Candidate 1
+	. Stable Version, lasts tests
+2003.02.28: IRCopTools 3.5 beta 5
+	. New filters for new OperServ2 messages
+2002.12.22: IRCopTools 3.5 beta 3
+	. New filters added
+2002.10.17: IRCopTools 3.5 Beta 1
+	. More On Load controls ..
+	  . If mirc is older than 6.03 IRCopTools wont load
+2002.10.07: IRCopTools 3.4
+	. Released
+2002.09.19: IRCOpTools 3.4 RC 1
+	. Last tests :) 
+2002.08.22: IRCopTools 3.4 Beta 4
+	. lots of fixes for mirc 6.03
+	. Better interface and new filters
+2002.06.16: IRCopTools 3.4 Beta 3
+	. More mIRC 6.02 fixes
+2002.06.13: IRCopTools 3.4 Beta 2
+	. More mIRC 6.02 fixes
+IRCopTools 3.3 is realeased on June 6, 2002
+2002.06.11: IRCopTools 3.4 Beta 1
+	. Many mIRC 6.02 bugs
+	. Many fixes
+IRCopTools 3.3 beta 5 Released April 23, 2002
+	. Added: /SetOs <servicename>
+	  Will change the service name for all akills, ...
+	  Useful for /setos operserv and /setos operserv2
+IRCopTools 3.3 beta 4 Released February 17, 2002
+	. Fixed: Log writes will now support LFN with spaces, reported by tribi.
+IRCopTools 3.3 beta 3 Released February 11, 2002
+	. Increased version number to meet CaeScript's version
+	. Added: Now all logs will have the network name
+	  ie: globops.DALnet.log
+IRCopTools 3.2 Beta 2 Released on January 12, 2002
+	. Added: /asi <- to akill broken identify script flooders.
+	. Added: Option to disable the echo of all the akill messages to the current screen.
+IRCopTools 3.2 Beta 1 Released on November 11, 2001
+	. Added: Filters for Diffie-Hellman key exchange on bahamut.
+IRCopTools 3.1 Released on November 4, 2001
+23/X/2001: Released IRCopTools 3.1 Beta 3
+	. Fixed: When you start ircoptools, the new windows wont flash
+	. Added: /atssp <- with spanish message for virii infected people
+03/IX/2001: Released IRCopTools 3.1 Beta 2
+	. Added:
+	  /ats <- akill for trojan sends
+	  /mw  <- to warn password crackers
+	. Added: Better /configure interface. Will show current settings on each 
+	  input box. If you dont have any settings, it will asign the ones from the
+	  "default.ini" file
+06/08/2001 : IRCop Tools 3.0 - Released
+26/VIII/2001: Released IRCopTools 3.1 Beta 1
+	. All windows will be stareted as minimed now :) Suggested by tribi
+29/VII/01: Released IRCopTools 3.0(m) beta 3
+	. Added:
+	  /an <- for SAbuse team notify.
+20/VII/01: Released IRCopTools 3.0(m) beta 3
+	. Added:
+	  /ahp2 <- akill for trying to hack passwords via email [SAbuse]
+17/VII/01: Released IRCopTools 3.0(m) beta 2
+	. Fixed: /configure will configure IRCoptols inside the script without leaving
+	  it or needing a restart.
+	. Minor fixes
+10/VII/01: Released IRCopTools 3.0(m) beta 1
+	. Added: F9 key for Vhost Searches
+	. Added: Filters for VHost clone report
+	. Better integration with CaeScript 3.0m
+13/VI/OO: Released IRCopTools 2.2(m) beta 2
+	. Fixed and added display filters
+	. Added:
+	  /amw <- akill for mass advertise
+	  /afs <- modifyed to just "flooding services"
+	  /aps <- akill for ping flooding services
+01/II/00: Released IRCopTools 2.2(m) beta 1
+	. Fixed many display bugs
+22/XII/00: Released IRCopTools 2.1(m) beta 6
+	. Added:
+	  Configurable kill reasons on the /configure file
+13/XII/oo: Released IRCopTools 2.1(m) beta 5
+	. Added:
+	  Configurable akill reasons on the /configure file
+08/XII/OO: Released IRCopTools 2.1(m) beta 4
+	. Added:
+	 /asa <- akill for abusing services commands
+	. Moved:
+	 /ahp <- akill for trying to hack passwords (30 min) [SABUSE]
+04/XI/00: Released IRCopTools 2.1(m) beta 3
+        . Added:
+          /ams <- akill for mass invites
+          /afl <- akill for flood
+          /ahs <- akill for harassment
+22/VIII/00:Released IRCopTools 2.1(m) beta 2
+	. Added:
+	  /clones2 ident@host <- to scan clones with a given ident
+	  suggested by w0mbaT.
+16/VII/00:Released IRCopTools 2.1(m) beta 1
+	. Added:
+	  /afs <- akill for flooding services (15 min) [SABUSE]
+	  /ahs <- akill for trying to hack passwords (30 min) [SABUSE]
+	  /ac  <- akill for clones (30 min)
+29/V/00:Released IRCopTools 2.0(m)
+27/V/00:Released IRCopTools 2.0(m) RC2
+        . Added /sping <complete server name>
+13/V/00:Released IRCopTools 2.0(m) RC1
+        . Added [W] WallOp feature.
+        . Added Filter for -e mode (Illegal DCC Sends)
+        . Fixed minnor cosmetic errors.
+	. Fixed Window appearance. It was hiding windows, now, if we 
+          are in that window, it wont minimize it again. :)
+          ie. A GloboOp Arrives, then Opes a Window for globops, then 
+          if we go and type in the window, it minimized it again and 
+          then kicked us off, this is fixed and wont happen.
+12/V/00:Released IRCopTools 2.0(m) beta 4
+        . Added Option to log Globops, LocOps, ChatOps, Services and 
+          Routing notices, all configurable via /configure
+10/V/00:Released IRCopTools 2.0(m) Beta 3
+        . Added /configure option to configure all Variables
+          via an .ini file.
+9/V/00: Released IRCopTools 2.0(m) Beta 2
+        . When IRCopTools is unloaded via /unload.ircoptools
+          all variables are deleted.
+6/V/00: Released IRCopTools 2.0(m) Beta 1
+        . Starting code from IRCopTools 1.2m
+        . Notation change to IRCoptools(m) as per Hammer's suggestion.
+        . Windows will now be started in minimized mode, to dont 
+          prompt when typing in other window.
+        . BUG: The clone searcher was not catching the clone 
+          notices sent by the server monitors, fixed.
+        . PopUps fixed to show the user nicks
+

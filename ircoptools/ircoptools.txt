@@ -1,0 +1,16 @@
+
+                        IRCopTools 6.0
+                           for  mIRC
+               ------------------------------
+
+                         By: CaeSpock
+
+To load IRCopTools, type:
+
+	/load -rs ircoptools\ircoptools.mrc
+
+You can add this line to your perform list too.
+
+Hugs
+
+ CaeSpock !
