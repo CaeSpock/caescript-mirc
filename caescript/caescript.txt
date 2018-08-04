@@ -1,0 +1,18 @@
+
+                        CaeScript 6.0
+                          para  mIRC
+               ------------------------------
+
+           Programado por: CaeSpock
+
+Bienvenidos al mundo de los Scripts para mIRC IRC!
+
+Para cargar el CaeScript teclea:
+
+	/load -rs caescript.mrc
+
+Puedes adicionar esta línea a tu Perform.
+
+Saludos
+
+ CaeSpock !

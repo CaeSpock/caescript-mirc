@@ -1,0 +1,8 @@
+; ###
+; ### Archivo de comandos autoejecutables
+; ### Este archivo sera procesado al iniciar CaeScript
+; ### y se ejecutaran todos los comandos que
+; ### esten luego de la linea [Comandos]
+;
+[comandos]
+

@@ -1,0 +1,638 @@
+2018.07.28 CaeScript 7.0 b2
+  . Algunos errores de paths corregidos.
+    Ya no se hace referencia a paths absolutos
+  . Sonido de inicio cambiado en el tema principal
+2018.07.25 CaeScript 7.0 b1
+  . Pequeños fixes al código
+  . Versión mínima requerida de mIRC : 7
+  . Corrección de errores
+  . Re organización del código para distribuirlo en Git
+2014.02.13 CaeScript 6.0
+  . Lanzamiento
+2013.06.03 CaeScript 6.0 Beta 2
+  . Se eliminó el ícono extra
+2012.01.30 CaeScript 6.0 Beta 1
+  . Se modifico la pagina del CaeScript a: http://www.caespock.org/ircsoftware/
+    Habia olvidado esto
+  . Se limpio el codigo
+  . Se standarizo el codigo con IRCopTools
+  . Se eliminaron tantos archivos de "cambios".
+    Se usara ahora un solo archivo "ChangeLog"
+28.01.12: CaeScript 5.5
+  . Lanzamiento
+05.12.11: CaeScript 5.5 Beta 3
+  . Se remueve el MP3 Player. Para que tener tanta cosa en el mismo script?
+    Por algo hay winamp u otros buenos programas!
+  . Codigo optimizado
+17.02.11: CaeScript 5.5 Beta 2
+  . Addicion de popups para EZBounce
+  . Adicionando nuevas capturas RAW para el nuevo bahamut
+  . Optimizando codigo
+17.02.11: CaeScript 5.5 Beta 1
+  . Cambiando aamp por errores a tinymp3
+  . Codigo optimizado
+24.03.10: CaeScript 5.0
+  . Lanzamiento
+24.03.10: CaeScript 5.0 Beta 2 se prueba
+  . Rollback a cambiar los sonidos a MP3.
+    Transforme todos los sonidos wav a stereo y con eso el problema con los
+    sistemas de 64 bits se soluciona.
+23.03.10: CaeScript 5.0 Beta 1 se prueba
+  . Cambio de todos los sonidos de WAV a MP3 para evitar la incompatibilidad
+    con los sistemas de 64 bits
+  . Adecuacion del instalador al nuevo formato de instalacion de mIRC
+  . Código optimizado
+  . Algunos bugs corregidos.
+18.08.07: CaeScript 4.5
+  . Varias correcciones
+  . Se adicionaron los siguientes modulos:
+    . Modulo que recuerda que nicks uso un usuario antes en el canal (en caso de volver a entrar)
+    . Modulo que lista las personas afectadas por un ban o un-ban
+    . Modulo que muestra clones a medida que entran al canal.
+  . Compatibilidad con Windows Vista
+  . Instalador ahora compatible con el formato de mIRC 6.3
+16.09.06: CaeScript 4.2
+  . Lanzamiento
+12.08.06: CaeScript 4.2 Beta 3
+  . Algunos nuevos botones en el toolbar, para el help del caescript y el ircoptools
+31.07.06: CaeScript 4.2 beta 2
+  . Se integro mejor el sistema con mIRC 6.2
+  . Se adicionaron mas botones
+  . Se esta considerando remover la opcion de botones
+21.07.06: CaeScript 4.2 beta 1
+  . Se elimino IpTracer.mrc por que el servicio que usaba, dnsstuff.com 
+    ha indicado que el uso mediante scripts de sus recursos es ilegal.
+  . Se corrigieron algunos graficos que no se veian bien en resoluciones grandes
+26.10.05: CaeScript 4.1
+  . Lanzamiento
+19.10.05: CaeScript 4.1 Beta 5
+  . Correccion de un pequeño error en el modulo aamp.mrc.
+    No permitia cargar archivos al playlist.
+12.10.05: CaeScript 4.1 beta 4
+  . Actualizacion del IPTracer.
+18.09.05: CaeScript 4.1 beta 3
+  . Mejora del CloneScanner despues de un reporte de bug por tribi
+  . Algunos popups mejorados
+14.08.05:CaeScript 4.1 beta 2
+  . Mejorado el modulo aamp.
+    Adicionalmente se posicionara de manera correcta en los distintos 
+    sistemas operativos.
+07.08.05: CaeScript 4.1 beta 1
+  . Nuevo LagMeter, el anterior estaba dando muchos problemas.
+  . Mejore la interfaz con el aamp y lo actualize a la ultima version.
+  . Correccion de codigo
+24.04.05: CaeScript 4.0b
+  . Lanzamiento
+  . Actualizacion del argh-amp (modulo de mp3)
+  . Correccion de pequeños bugs reportados por tribi.
+12.04.05: CaeScript 4.0
+  . Lanzamiento
+11.04.05: CaeScript 4.0 Beta 5
+  . Se adiciono
+    /player <- para reproducir temas en formatos que no reconozca
+    el mp3 incorporado. Sugerido por tribi
+08.03.05: CaeScript 4.0 Beta 4
+  . Se modifico de /users a /dalusers
+    /dalusers <- para ir a users.dal.net
+    para no interferir con /users del ircD
+28.02.05: CaeScript 4.0 Beta 3 se prueba
+  . El módulo de mp3 se auto abrira al cargar el script, y se 
+    posicionara en la barra de opciones de mIRC :)
+  . Modifique el output de /informacion y ahora sera solo local para 
+    evitar el flood a canales o query. Sugerido por Danielex
+27.02.05: CaeScript 4.0 Beta 2 se prueba
+  . Adición de un nuevo módulo de MP3.
+    Es sencillo, eso es lo que busco :) y funciona bien
+    argh-amp by Andy Dufilie
+  . Se cambio /informacion <- ahora despliega toda la info del sistema,
+    sin necesidad de un dll o cualquier otra cosa.
+    sysinfo por nixor - www.xoniq.org
+    ATENCION: puede ser lento o bien causar problams con antivirus o
+    antitrojanos, pues revisa el registry de windows. Avisarme :)
+30.01.05: CaeScript 4.0 Beta 1 se Prueba
+  . Adición de un panel de control para sustituir el antiguo método de 
+  	configuración.
+  . Código optimizado
+  . Modificación del popup de Búsqueda de Clones luego de una
+    sugerencia de Danielex.
+  . Algunos bugs corregidos.
+21.11.04: CaeScript 3.9 
+        Fecha de lanzamiento
+30.10.04: CaeScript 3.9 Beta 5
+        . Se elimino el moo.dll y se cambiaron varias funciones
+        . Se cambio /informacion por informacion reducida
+        . Se adiciono /users <- para ir a users.dal.net
+27.07.04: CaeScript 3.9 Beta 4
+	. Se corrigieron detalles pequeños con los formatos de texto /texto17 y /texto18
+	  Reportado por Andres30
+	. Se corrigio el cargado inicial de los formatos de texto :)
+	  No estaba activado para los nuevos formatos.
+	. Se actualizo el modo de la calculadora a la nueva version.
+	  Modulo Calc.mrc por Sigh_
+26.07.04: CaeScript 3.9 Beta 3
+	. El Formato /texto17 estaba incorrecto. Corregido. Reportado por Tribi.
+	. Se adiciono el formato de texto /texto18 <- Solicitado por tribi.
+	. Se adiciono un dialogo para modificar el volumen del sistema y sus opciones
+	  /volumen
+23.07.04: CaeScript 3.9 Beta 2
+	. Elimine las burbujas, solo causan confusion y 
+	  que los mensajes no salgan donde deben salir.
+	. Restaure el comando /math es mas efectivo a veces
+	. Algunos cambios menores en la funcion de DNS :) Ahora funciona bien.
+	. Adicion de un formato de texto: /texto17 con fondo amarillo y letras rojas.
+22.07.04: CaeScript 3.9 Beta 1
+	. Cambio de algunos mensajes
+	. Adicionado:
+	  /kx2 nick <- kick por preferencia sexual
+	  /bx2 nick <- kickban por preferencia sexual
+	  /bx2t nick <- kickban temporal por preferencia sexual
+	. Se cambio el comando /math .. ver a continuacion
+	. Adicinada una calculadora mas practica echa por Sigh_
+	  /calculadora <- para iniciar
+	. Incorporado un módulo que concuerda ips con ubicaciones en paises.
+	  Codigo a partir del snipplet de BloW-MaN
+	. Agregado modulo para dibujar burbujas en la parte inferior derecha de la pantalla.
+	  Util para mensajes :)
+	  Modulo por: JamesHetfield
+20.05.04: CaeScript 3.8
+	. Todo estable :)
+	  Fecha de lanzamiento
+30.03.04: CaeScript 3.8 Beta 9
+	. Corregido: Finalmente corregido :) Cuando uno se pone away y esta 
+	  conectado a dos redes, el medidor de lag se desactivaba en las 
+	  dos redes. Esto fue corregido, y aproveche de 
+	  arreglar un problemita con el /away. Reportado por tribi.
+28.03.04: CaeScript 3.8 Beta 8
+	. Adicion de un mensaje avisando que se cargo exitosamente el script y otro 
+	  mensaje avisando que se descargo exitosamente el script. Sugerido por tribi.
+	. Corregido: Cuando uno se pone away y esta conectado a dos redes, el medidor
+	  de lag se desactivaba en las dos redes. Esto fue corregido, y aproveche de 
+	  arreglar un problemita con el /away. Reportado por tribi.
+	. Los mensajes de avertencias fueron movidos de /msg a /notice para evitar 
+	  que se floodee el canal. Sugerido por Danielex
+	  Esto afecta a: /mf /mg /ml /mm /mr
+21.03.04: CaeScript 3.8 Beta 7
+	. Corregido un problema con /quit cuando se tenia el modulo de los 
+	  agentes de MS Cargado y tambien habia una opcion de formato de texto
+	  /textoX activada. Reportado por Andres30
+	. Corregido un pequeño detalle mas, en la activacion del sistema de away
+	  cuando uno esta en canales. Me habia olvidado corregir tambien 
+	  para cuando uno vuelve del away :) 
+20.03.04: CaeScript 3.8 Beta 6
+	. Se adicionaron mas frases, gracias a Danielex
+	. Se adicionaro la opcion de enviar piropos. Gracias Danielex
+	  Esta opcion esta disponible mediante popups al nick en el canal, y en privado.
+	. Adicion de:
+	  /piropo <nick> <- envia un piropo
+	. Corregido un bug con el /bl reportado por Danielex
+	. Corregido un bug con la activacion del sistema de Away cuando uno no esta en 
+	  canales y tiene la opcion de notificcion de away activada. Reportado por tribi.
+	. Corregido: Cuando la opcion "usarsonido" indique que no se use sonido, 
+	  CaeScript eliminara el sonido en todo el sistema :) Reportado por tribi.
+	. Algunos cambios cosmetidos pequeños sugeridos por Andres30
+11.02.04: CaeScript 3.8 Beta 5
+	. Se adiciono /advconfig <- para acceder a la configuración avanzada del
+	  script. Se trata de la edición directa del archivo de configuración. 
+	  Sugerido por tribi.
+10.02.04: CaeScript 3.8 Beta 4
+	. Los comandos /kg, /mg y /bg fueron adecuados a indicar "ban por escribir
+	  cosas sin sentido" en vez de "cosas incoherentes".
+	. Problema con el cambio del configurador de temas, se volvio al antiguo 
+	  esquema :) Ni modo :) . Reportado por tribi.
+	. Se adicionaron los nicks de los testers y codificadores del caescript al
+	  notify por defecto, de ese modo se le dara mas posibilidad de contacto 
+	  a los usuarios. Sugerido por tribi.
+08.02.04: CaeScript 3.8 Beta 3
+	. Se cambio la etiqueta en el archivo de configuracion de [MinutosBanTemporal]
+	  a [BanTemporal]. Solo lexico.
+	. Se corrigio un bug en /kg
+	. Se adiciono:
+	  /reglas <- que mostrara al canal un set de reglas "estandar"
+	. Se adiciono en la configuracion la posibilidad de especificar que tipo de 
+	  ban a utilizar en los comandos /k y /b.
+04.02.04: CaeScript 3.8 Beta 2
+	. Se modificaron los temas, se movio la version de temas a 6.12 y se introdujo
+	  la posibilidad de que los usuarios pueden poner distintos fondos, dependiendo 
+	  de la resolucion que tenga el usuario usando el script.
+	  Por ende, se puede setear en estas 3 variables el fondo:
+	  fondo1024 <- para 1024x768 o superior
+	  fondo800  <- para 800x600
+	  fondo640  <- para 640x480 o inferior
+03.02.04: CaeScript 3.8 Beta 1
+	. Adicion de:
+	/bl <nick> <- kick ban por uso de otro idioma.
+	/blt <nick> <- kick ban por uso de otro idioma, temporal.
+	/kl <nick> <- kick por uso de otro idioma.
+	/br <nick> <- kick ban por repetir.
+	/brt <nick> <- kick ban por repetir, temporal.
+	/kr <nick> <- kick por repetir (cambiado).
+	/kg <nick> <- kick por teclear cosas incoherentes: Problemas con el teclado?
+	/mg <nick> <- mensaje de advertencia por teclear cosas incoherentes
+	/bg <nick> <- kickban por teclear coss sin sentido.
+	/bgt <nick> <- kickban temporal  por teclear coss sin sentido.
+	/bguest <nick> <- ban a guest*!*@* y kick al <nick> con el mensaje apropiado
+	. Eliminado setting en la configuracion que pregunta la cantidad de redes
+	  en la que se chatea. Simplemente se dejara la opcion de descargar o no
+	  el script. Sugerido por tribi.
+	. Se renombro la opcion de descargue del caescript de 'desconexion' a 
+	  'descargar'.
+	. Se modifico el modo en el cual el configurador pide por el tema a usar.
+	  Sugerido por tribi.
+	. Adicionado:
+	/beso <nick> <- manda un beso apasionado a nick
+	/apreton <nick> <- le da un apreton a nick
+10.01.04: CaeScript 3.7
+	. Corrección de Bug, que descargaba el CaeScript en cualquier situacion.
+	  Reportado por _Dorka_
+	. Adición del tema Invision
+	. Eliminado el programa CC99 que servia para mostrar colores.
+	. Revision de los popups y depuracion de los mismos./
+	. Eliminado modulo de coloreado de nicks, ya es nativo en las nuevas
+	  versiones de mIRC
+22.12.03: CaeScript 3.6 es lanzado.
+28.11.03: CaeScript 3.5e en pruebas
+	. Se adicionaron dos variables a la configuracion:
+	-> Posibilidad de Setear en cuantas redes simultaneas
+	   uno chatea generalmente. Este dato es útil para evitar la 
+	   descarga del Script cuando se este en mas de 1 red y
+	   se desconecte de una.
+	-> Posibilidad de configurar o no la descarga del script
+	   al desconectarse.
+14.10.03: CaeScript 3.5c lanzado
+	. Pequeño error ortográfico detectado. Fue corregido.
+14.10.03: CaeScript 3.5b lanzado
+	. Corrección de un bug con el Agente de MS. Reportado por tribi.
+	. Nuevamente otro problema entre el LagMeter y el Away. Reparado :)
+	  Reportado por tribi.
+	. mIRC 6.12 salio ayer :) Adecuado a este nuevo mirc
+13.10.03: CaeScript 3.5 Lanzado
+05.10.03: CaeScript 3.5 Release Candidate 7
+	. Eliminadas las canciones - Fueron determinadas inutiles :) 
+	. /ms No estaba activo, fue reparado, se movio el kick por lenguaje a /ml
+	  Reportado por Danielex.
+	. Corregido un bug con el agente de MS que no estaba mostrando texto.
+	  Reportado por tribi
+04.10.03: CaeScript 3.5 Release Candidate 6
+	. Cambios menores
+02.10.03: CaeScript 3.5 Release Candidate 5
+	. Corregido un bug con AWAY y el LagBar, encontrado por tribi :)
+29.09.03: CaeScript 3.5 Release Candidate 4
+	. LagBar Cambiado al LagBar de Best - codificado por |ur|
+	. Nuevamente, a quienes desarrollam temas, se adicionaron campos en el tema.ini
+	  por favor revisen, ahora tambien se incluye la version del tema.
+	. Si la version del tema es inferior a 6.1 no se cargan los botones
+	  de toolbar :)
+30.08.03: CaeScript 3.5 Release Candidate 3
+	. Adecuado a mIRC 6.1
+	. /mp3 extendido: Si selecciona multiples archivos, los pone en cola, uno tras otro.
+25.06.03: CaeScript 3.5 Release Candidate 2
+	. Arreglado un problema con el sistema de Away y el lagmeter (Reportado por tribi)
+04.03.03: CaeScript 3.5 Release Candidate 1
+	. Version estable, ultimas pruebas.
+27.02.03: CaeScript 3.5 beta 5
+	. Se corregio el lagbar , este soporta multiples redes. Sugerido por tribi.
+	. Atención a quienes desarrollan temas, se adicionaron campos en el tema.ini
+	  por favor revisen ese archivo (son relativos al lagbar).
+	. Adicionado:
+	  /colchoneta nick <- Presta una colchoneta para que se recupere de la caida.
+01.01.03: CaeScript 3.5 beta 4
+	. Se adicionaron y corrigieron varios items con respecto a la ventana de Datos.
+	  Sugerido por tribi.
+	. Adicionado un control para el RAW 408 que impide el uso de colores en canales.
+	  El aviso de envio fallado de mensaje al canal, saldra ahora en el canal.
+	. Adicionado:
+	  /ml nick <- Envia una advertencia de que el canal es de solo español.
+21.12.02: CaeScript 3.5 beta 3
+	. Bug arreglado: El notify salia doble debido a que el script no podia escribir en la 
+	  ventana de lag. Se adiciono una verificacion. Reportado por tribi.
+	. Errores de ortografía reportados por Atena_20. Fueron arreglados.
+15.12.02: CaeScript 3.5 beta 2 es lanzado
+	. Adicion de un LagMeter o Medidor de Lag
+	. Solucionado un problema con el limpiado de ventandas. Reportado por tribi.
+	. Adicionado:
+	  /msgmp3 on/off para activar o desactivar los mensajes de mp3,
+	  por la sesión actual
+	  /msgvideo on/off para activar o desactivar los mensajes de video,
+	  por la sesión actual
+	  /mf nick <- Envia una advertencia de que no se permite floodear
+	  /mm nick <- Envia una advertencia de que no se permite el uso de mayusculas
+	  /mr nick <- Envia una advertencia de que no se permite repetir
+17.10.02: CaeScript 3.5 beta 1 es lanzado
+	. Mejoras en la comprobacion y reporte de errores.
+	  . Si el tema no existe, usara el tema por defecto 'base'.
+	  . Si la version de mIRC es menor a 6.03 CaeScript no se cargara.
+	. Adicionado:
+	  /kx <nick> <- kick para charlas o nick con contenido sexual
+	  /bx <nick> <- kickban por charlas o nick con contenido sexual
+	  /bxt <nick> <- kickban temporal por charlas o nick con contenido sexual
+09.10.02: Caescript 3.4b es Lanzado
+	. Se detecto una falla en el instalador
+	  Reportado por tribi.
+07/10/02: CaeScript 3.4 es Lanzado
+01/10:02: CaeScript 3.4 RC1
+	. Nuevo buscador de clones para canales
+	. Mejoras menores
+01/09/02: CaeScript 3.4 Beta 8
+	. Algunos cambios menores y bugs descubiertos por tribi.
+	. Adicion de formatos de topic sugerido por atena_20
+22/08/02: CaeScript 3.4 Beta 7
+	. Algunos cambios menores y cambio de los colores de mensajes :)
+17/08/02: CaeScript 3.4 Beta 6
+	. Salida del mIRC 6.03 - Corrección de compatibilidad
+	. Varios procesos corregidos
+08/Viii/02: CaeScript 3.4 Beta 5
+	. Adición de una opcion para eliminar el sonido de varios eventos del CaeScript
+	  Esto en la configuracion del CaeScript
+15/Vii/02: CaeScript 3.4 Beta 4
+	. Correcciones a algunos modulos y popups.
+	. Un nuevo poema por atena_20
+	. Corregido error que se presentaba cuando alguien hacia /part en la ventana de
+	  status. Reportado por tribi.
+	. Mejor administracion de temas
+	. Nuevos temas adicionados: Nocturno, amanecer, granizado
+16/VI/02: CaeScript 3.4 Beta 3
+	. Corrección de algunos módulos y popups con nombres largos.
+	. adicion de /kr <- kick para usuarios con problemas en el teclado :)
+13/Vi/02: CaeScript 3.4 Beta 2
+	. Corrección del módulo de carga de los ircoptools, debido a un bug del mIRC 6.02
+	  estaba funcionando mal. Gracias a Hammer
+11/VI/02: CaeScript 3.4 Beta 1
+	. Muchos bugs con el mIRC 6.02
+	. Correcciones estéticas detectadas por tribi, Atena_20, me_gusta_mucho_el_licor_cfc.
+	. Corrección del /ops2
+06/VI/02: CaeScript 3.3 es lanzado.
+12/V/02: CaeScript 3.3 Beta 7
+	. Notify ahora mostrara siempre en el status la direccion completa del usuario entrante o saliente.
+	. Adicionado: /ops2 y /opsv2 sin colores
+	. Adicionado: modo experimental para baneo de repetidores.
+	. Adicionado: Se prueban 2 nuevos addons: visto.mrc - irc2html.mrc
+23/IV/02: CaeScript 3.3 Beta 6
+	. Se elimina el addon de mp3, ahora el modulo de mp3 incluido hace todo el trabajo :)
+23/III/02:CaeScript 3.3 beta 5
+	. Correción: El módulo de coloreado de nicks no soportaba nombres largos con espacios.
+	  Reportado por tribi.
+	. Varios móduloes corregidos reportados por tribi.
+17/II/02: CaeScript 3.3 beta 4
+	. Corrección: El CaeScript ahora soportara nombres largos con espacios.
+	  Reportado por tribi.
+06/II/02: CaeScript 3.3 beta 3
+	. Mejora del módulo de DNS
+	. Adecuación a mIRC 6.0
+	. Adición de rutinas para evitar flood de AWAY en ventanitas (mIRC 6.0)
+03/II/02: CaeScript 3.3 beta 2
+	. Adicion de opcion para ver canales comunes con usuarios
+	. Al recibir un privado, el script le indica el host y los canales privados.
+17/I/02: CaeScript 3.3 beta 1
+	. Adicion de /video para reproducir videos
+	. Adicion de Kick ban por waso (sugerido por mil1974)
+	. Adicion de algunos cambios cosmeticos sugeridos por tribi.
+06/XI/01: CaeScript 3.2 se lanza para corregir un bug en los popups
+	  . Adicion de un tema "gnome" a la distribución y el tema "base" fue
+	    cambiado para darle una apariencia nueva al script
+	  . Corrección de algunos mensajes :) 
+04/XI/01: CaeScript 3.1 Sale
+03/XI/01: CaeScript 3.1 Release Candidate 2 se prueba
+	. Se modifico la carga de ADDons para el CaeScript, ahora solo se debe adicionar el
+	  nombre del archivo o del addon al archivo caescript/addons/addons.txt para que
+	  este sea cargado y descargado automaticamente.
+	. /musica modificado
+	. Cambiado /info a /informacion debido a que el se cruzaba con el
+	  comando /info del ircd.
+	. Si el valor de cualquiera de los fondos en los temas es "ninguno" entonces
+	  no se cargara dicho fondo :)
+	. El logo ascii de la pantalla de datos fue eliminado por que no todos los fonts
+	  son de letra de ancho constante y no se notaba que dijera CaeScript.
+	. Ahora /volsistema dara el porcentaje total
+	. Adicionado:
+	  /kt <- kick por virus trojanos
+	  /bt <- ban por virus trojanos
+	  /btt <- ban temporal por virus trojanos
+	. Cambiado /bt a /btmp para bans temporales
+02/XI/01: CaeScript 3.1 Release Candidate 1 se prueba
+	. Adicion de:
+	  /superhola
+	  /superhola2
+	  /musica
+	  /llegue
+	  /holas2
+09/IX/01: CaeScript 3.1 Beta 6 se prueba
+	. Adicion a la configuración de una opción para desplegar el notify Ademas de
+	  en la ventana de status en la ventana principal. Sugerido por tribi.
+08/IX/01: CaeScript 3.1 Beta 5 se prueba
+	. Corrección al módulo /configurar <- reportado por tribi
+02/IX/01: CaeScript 3.1 Beta 4 se prueba
+	. Se mejora la interface de /configuracion
+	  Ahora si uno re configura, apareceran los valores configurados en las ventanas
+	  de datos. Para la primera vez qu se configure caescript, o en caso de que se
+	  borre algun valor, existen datos por defecto en el archivo default.ini
+28/VIII/01: CaeScript 3.1 Beta 3 se prueba
+	. Se adiciono el moo.dll
+	. Comandos adicionados:
+	  /info
+	  /uptime
+26/VIII/01: CaeScript 3.1 Beta 2 se prueba
+	. Correción de descarga de TODOS los modulos al desconectarse.
+	. El formato de despliegue de sonidos fue cambiado de un mensaje al canal a un /me
+6/VIII/01: Caescript 3.1 Beta 1 se prueba
+	. La ventana de datos ya no sera gráfica, nunca se desplegaba correctamente
+	  en varios monitores.
+	. Corrección de un pequeño bug en la carga de addons.
+	. Adición de menú de carga de addons, en caso de que no se los haya cargado.
+4/VIII/01: Caescript 3.0 es lanzado.
+4/VIII/01: Sale el CaeScript 3.0 Beta 8
+	. Corrección de algunos errores ortográficos
+	. Version estable.
+27/VII/01: Sale el CaeScript 3.0 Beta 7
+	. /opsv ya no puede reportar canales.
+	. Si estamos mostrando que estamos away, tambien mostrar cuando volvemos.
+	. Prueba de un nuevo tema: metal :) Exitosa :)
+	. Arreglo de unos popups
+22/VII/01: Sale el CaeScript 3.0 Beta 6
+	. Modificación de unos gráficos
+	. Corrección de algunos errores ortográficos
+	. Las opciones de colores en los mensajes de ops y voiced no estaban siendo
+	  asignadas de manera correcta en /configurar. Gracias Tribi.
+	. El editor del archivo de comandos autoejecutables estaba incorrecto. Gracias tribi.
+	. La asignación de agentes en /configurar estaba incorrecta. Gracias Tribi
+	. Si no tiene el archivo variables.ini, caescript solicitara se configure
+	  el script automáticamente. Sugerido por tribi.
+	. Mensajes de activacion y desactivacion del Paginador de Ausente (Away Pager)
+	  mejorados. Sugerido por tribi.
+	. La opcion de limpiado de todas las pantallas estaba borrando inclusive la
+	  pantalla de información del CaeScript. Corregido. Gracias tribi.
+20/VII/01: Sale el CaeScript 3.0 Beta 5
+	. Adición de formatos de texto al popup de privados. Sugerido por ximex
+	. Adicion de sonidos a la opción "Personales" en los popups. Sugerido por ximex
+	. Corrección de sintaxis en varios comandos. Gracias ximex.
+18/VII/01: Sale el CaeScript 3.0 Beta4
+	. Corrección del cargado del agente. Si la opcion de mostrar agente es 0, entonces
+	  directamente ni buscarlo.
+	. A sugerencia de tribi, se cambio el formato de texto 15 /texto15 para que
+	  al iniciarlo solicite que colores usar.
+	. El instalador ahora mantendra un histórico de las versiones instaladas. Muy
+	  util para actualizaciones.
+	. Se modificó el comando /configurar <- ahora la configuración de caescript se hace
+	  en el mismo script.
+	. Se adicionó una opción en la configuración para determinar si se usan o no
+	  colores en el mensaje a ops y a los ops + voiced. Esto es útil cuando se trata
+	  de canales +c (que no pueden desplegarse colores). Sugerido por tribi.
+	. Se adiciono un archivo donde el usuario puede llenar todos aquellos comandos que
+	  desea se autoejecuten cuando cargue el CaeScript. Este archivo es:
+	  'caescript\autoexec.txt'.
+	. Cambios y arreglos cosméticos.
+	. Se adiciono el comando /reiniciar para descargar y cargar el CaeScript
+17/VII/01: Sale el CaeScript 3.0 Beta3
+	. Adición de mas sonidos
+	. Adición de más ascii
+	. El documento de ayuda ahora refleja correctamente las nuevas adiciones.
+	. Problema No resuelto: Si descargas CaeScript, el IRCopTools tambien se descarga,
+	  y si lo recargas, deberas recargar manualmente el ircoptols.
+14/VII/01: Sale el CaeScript 3.0 Beta2
+	. Adición de más popups
+	. Adicion de más formatos de texto, hasta el 15
+	. El formato 15 de texto pude ser configurado a placer del usuario mediante
+	  el archivo de configuracion: /configurar
+	. Adicionado el módulo de control de EggDrops
+10/VII/01: Sale el CaeScript 3.0 Beta1
+	. Corregido: Se estaban buscando agentes en los discos duros, inclusive
+	  teniendo la opción de usar agentes desactivada.
+	. Incorporación de Temas de CaeScript, para seleccionar imagenes de fondo,
+	  de barra y colores.
+	. Incorporación de modulos. De este modo se pueden adicionar y/o cargar
+	  modulos a elección.
+	. Adición de las siguientes opciones en el archivo de variables:
+	  [Tema]  <- seccion en la cual se define que tema se usara
+	  [pantallas] <- para definir si se despliega o no la pantalla informativa
+	  		 del CaeScript
+21/V/01: Sale el CaeScript 2.2 Rel2
+	. Corrección del módulo de formato de texto.
+	. Adicion de una opcion en el archivo de configuracion para cargar
+	  automaticamente un formato de texto prefijado.
+	. Adicion de popups para cargar formatos de texto.
+	. Corrección de bugs en el manejo del MS Agent.
+	. Adicion de /acargar para cargar el agente
+	  y /adescargar para descargarlo.
+	. Nuevo fondo y sonido de inicio por defecto.
+	. Actualizacion de la Documentacion.
+19/V/01: Sale el CaeScript 2.2
+	. Compatibilidad y optimizacion del código para mIRC 5.9
+	. Corrección de varios errores.
+	. Adicion de funciones de despliegue de texto con formatos especificos
+	  /texto1 .. /texto10 <- 10 tipos
+	  /texton <- para desactivar
+	. Adicion de Sonidos y ASCII
+22/XII/00: Sale el CaeScript 2.1 Beta 3
+	. Compatibilidad y optimización del código para mIRC 5.82
+	. Eliminacion de mensajes del caescript al ejecutar /cerrar
+12/XI/00: Sale el CaeScript 2.1 Beta 2
+	. Adición de la opción de uso de un reproductor externo de mp3.
+	. Compatibilidad y optimización del código para mIRC 5.81
+	. Adicionado /nosonido <- para detener sonidos.
+	. Adicionado /mute para activar el mute general.
+	  /mute on <- activa el mute
+	  /mute off <- desactiva el mute
+	. Adicionado /volumen <numero del 1 al 65535> <- para modificar el
+	  volumen del sistema
+	. Adicionado /volsistema <- para ver el volumen del sistema
+	. Carpeta /apps eliminada, y con ella todos los módulos de ataques y floods.
+	  CaeScript es un script amigable.
+16/VII/00: Sale el CaeScript 2.1 Beta 1
+	. Adicion de la opcion Agente para asignar que agente de ms ver en el
+          CaeScript. Sugerido por tribi.
+	. Adicion de una opcion para determinar si se envia o no un CTCP SOUND
+	  cuando se toque un MP3. El CTCP Sound hara que detecten que tu enviaste
+	  un sonido y los que tengan script te lo solicitaran. Si esto te es molestoso
+	  desactiva esta opcion.
+	. Adicion de una opcion para determinar si se muestra o no un texto cuando
+	  se este escuchando un MP3. Tambien se puede definir ese texto.
+29/V/00:Sale el CaeScript 2.0(m)
+14/V/00:Sale el CaeScript 2.0(m) RC1
+        . Al desconectarse, salir, del mIRC, se descarga el CaeScript
+          pues ahora esta incluido en el PERFORM.
+        . Correcciones menores al codigo y detalles de ortografía.
+        . Eliminados /aviso /aviso2 y /aviso3
+        . Adicionados /kf /kh /ki /kp /ks 
+        . No exisitia /rn4 pero si /rn5 , corregido esto.
+        . Eliminados algunos PopUps de IRCops, ahora solo se activan 
+          con el modulo IRCopTools.
+        . Incorporado IRCopTools 2.0(m) RC1 . Ahora que las dos 
+          versiones estan listas para salir, su desarrollo será 
+          paralelo.
+12/V/00:Sale el CaeScript 2.0(m) Beta 4
+        . Bug: Corregido bug que aunque se seleccionaba ocultar el 
+          Ms Agent, este quedaba visible luego de alguna acción.
+        . Se adicionan /ahablar y /agente pensar para no repetir 
+          codigo en cada procedimiento y solo llamar a esas rutinas.
+        . Se adicionan acciones del Ms Agent a los PopUps.
+        . Se adiciona una opcion que auto oculta al Agente de MS
+          y solo lo muestra en ciertas ocaciones. Esta incluido en
+          la configuración via /configurar.
+        . Se adiciona una opción que permite configurar si se van a 
+          mostrar los mensajes de AWAY a los canales o no. Esto se
+          configura via /configurar.
+10/V/00:Sale el CaeScript 2.0(m) Beta 3
+        . El comando /mp3 ahora solo muestra el nombre del archivo
+          y no así la ruta completa. También se muestra el tamaño 
+          del archivo.
+        . Se adicionan más drives a la búsqueda del Agente MS, ahora 
+          buscará hasta el drive H y verificará que existan los drives.
+        . Ahora, si tienes varios nicks seleccionados en la lista 
+          de nicks, y usas los comandos /rn, saldran todos los nicks 
+          seleccionados separados por una coma.
+9/V/00: Sale el CaeScript 2.0(m) Beta 2
+        . Bug: Si estaba instalado el MS Agent, pero no se 
+          tenia un Agente por defecto, generaba un error
+          y no se cargaba bien el script. Reportado por Huarito.
+          Esto se puede deber por que se tiene instalado Win9x o
+          WinNT con Office 2000, que instala los archivos básicos de 
+          los agentes de MS, y a los caracteres en und directorio
+          dentro el Office y no asi en el directorio de Agentes.
+          Si está instalado el Ms Agent pero NO existe Agente por
+          defecto(instalado en el directorio de Agentes de MS),
+          CaeScript tratara de buscar uno en los drives c:\, D:\, 
+          E:\ y F:\ Se cargará el primer Agente encontrado, y se 
+          detendrá la búsqueda en futuros drives, con la idea de 
+          reducir el tiempo de búsqueda.
+        . Bug: Si se tenia la versión 5.7 de mIRC, el cargado del 
+          Ms Agent con un comando del mIRC 5.71 generaba error.
+          Reportado por Huarito.
+          Corregido, ahora se evalua que versión de mIRC se tiene
+          para elegir el metodo de cargado del Agente.
+        . La mayoria de los Agentes de Ms Office NO tienen 
+          interpretación hablada de los textos, pero lo muestran.
+          Para más información sobre los Ms Agent, Bajar Ms Agents,
+          Bajar un interpretador de Texto "Text-to-Speech engine,
+          ver como crear Agentes de Ms, ve a:
+          http://msdn.microsoft.com/workshop/imedia/agent
+6/V/00: Sale el CaeScript 2.0(m) Beta 1
+        . Se inicia el código a partir del CaeScript 1.2m
+        . Bug del Instalador: No se instalaba un archivo de 
+          chistes "chistes.TXT", pero si un "chistes.cae" de 
+          manera errada. Reportado por Huarito.
+        . Se modifica el Nombre a CaeScript 2.0(m) se cambia al 
+          uso de parentesis a sugerencia de Hammer.
+        . Se introduce el Ms Agent.
+        . Se introduce archivo de configuracion de variables
+        . Se introduce una imagen de fondo para las ventanas.
+        . Se introduce el comando /configurar para editar el 
+          archivo de variables
+        . Se eliminan los comandos /cs y /ns (nadie los usa)
+        . Se incluye un Auto Away en base al tiempo de $idle
+        . Bug: La ventana de información CaeScript se mostraba
+          con letras difusas cuando se cambiaba el Font por 
+          defecto. Reportado por tribi.
+          La ventana ahora tiene tipo de letra fijo "Arial".
+        . La ventana de información CaeScript es creada en
+          modo minimizado.
+        . Se modifican varios popups, para que muestren el nick
+          del usuario, Sugerido por Flecha_de_Amor
+        . Se introduce la interactividad del Ms Agent con 
+          varios aliases.
+        . Se adicionan sonidos a los eventos de entrar a un canal
+          y ser pateado de un canal.
+        . BUG: Si se asignaba un color a los NOTICES, el módulo de 
+          compatibilidad con CaeScript para pIRCh mostraba esos
+          notices con un color fijo.
+          Ahora se usa el color asignado en la ventana de colores.
+        . Cuando se descarga CaeScript, se descargan tambien todas 
+          las variables cargadas y configuraciones de pantalla.
