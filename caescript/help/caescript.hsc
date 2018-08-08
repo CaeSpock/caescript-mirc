@@ -188,8 +188,8 @@ Writing
 Licencia del CaeScript
 FALSE
 21
-{\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fprq2 Arial;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\fnil Courier New;}{\f4\fswiss\fcharset0 Arial;}}
-{\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red0\green128\blue128;\red128\green0\blue0;\red0\green0\blue255;}
+{\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fprq2 Arial;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\fswiss\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red0\green128\blue128;\red128\green0\blue0;}
 \viewkind4\uc1\pard\cf1\f0\fs8 
 \par \pard\qc\cf2\b\fs40 Licencia del CaeScript\cf3 
 \par \pard\cf1\b0\fs8 
@@ -201,11 +201,11 @@ FALSE
 \par \f2 2. Es FreeWare de uso libre. Es decir, cualquier usuario puede usar este software por el tiempo que desee, mientras respete la autor\'eda intelectual e ideal individual de cada uno de los procesos incluidos en este software.\f1 
 \par \f2 3. Este software es provisto COMO ES Y TAL ES. El autor no acepta responsabilidad de da\'f1os en ning\'fan modo. Usando este software, usted est\'e1 de acuerdo con los t\'e9rminos establecidos ac\'e1 y en la dem\'e1s documentaci\'f3n.\f1 
 \par \f2 4. El autor no se responsabiliza por problemas en la instalaci\'f3n del paquete y tampoco est\'e1 obligado a dar soporte ni ayuda en la instalaci\'f3n del script, manejo del paquete o ejecuci\'f3n.\f1 
-\par \f2 4. La distribuci\'f3n esta condicionada a pasar el archivo ejecutable (instalador) de este software, lo que garantiza que el c\'f3digo no haya sido modificado. Si desea acceder al c\'f3digo fuente, lo puede encontrar en nuestra p\'e1gina de GitHub: \cf5\b0\strike\f3 https://github.com/CaeSpock/caescript-mirc\cf4\strike0\{link=*! ExecFile("https://github.com/CaeSpock/caescript-mirc")\}\cf0\b\f1 
+\par \f2 4. La distribuci\'f3n esta condicionada a pasar el archivo ejecutable (instalador) de este software, lo que garantiza que el c\'f3digo no haya sido modificado. Si desea acceder al c\'f3digo fuente, lo puede encontrar en nuestra p\'e1gina de GitHub: \cf4\b0\f3\{html=<a href="https://github.com/CaeSpock/caescript-mirc" target="_blank">\cf2\b https://github.com/CaeSpock/caescript-mirc\cf4\b0 </a>\}\cf0\b\f1 
 \par \f2 5. \f1 Por favor note que la licencia del CaeScript es diferente a la licencia \lang1033\f2 individual d\lang3082\f1 e los programas pIRCh, mIRC\lang1033\f2 , irssi\lang3082\f1  y bitchX.
 \par \pard\f2 
 \par \cf1\lang1034\f0 
-\par \cf2\lang3082\strike\f4 << Al \'cdndice\cf4\strike0\{linkID=%10\}\cf1\lang1034\f0 
+\par \cf2\lang3082\strike\f3 << Al \'cdndice\cf4\strike0\{linkID=%10\}\cf1\lang1034\f0 
 \par \cf0\lang3082\f2 
 \par \f1 
 \par }
@@ -222,7 +222,7 @@ Writing
 Reporte de Errores y Sugerencias
 FALSE
 21
-{\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fcharset0 Arial;}{\f2\fnil\fcharset0 Arial;}{\f3\fnil Courier New;}{\f4\fnil\fcharset0 Courier New;}{\f5\fswiss\fprq2 Arial;}{\f6\fswiss\fprq2\fcharset0 Arial;}}
+{\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fcharset0 Arial;}{\f2\fnil Courier New;}{\f3\fswiss\fprq2 Arial;}{\f4\fswiss\fprq2\fcharset0 Arial;}}
 {\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red128\green0\blue0;}
 \viewkind4\uc1\pard\cf1\f0\fs8 
 \par \pard\qc\cf2\b\fs40 Reporte de Errores y Sugerencias
@@ -231,15 +231,15 @@ FALSE
 \par \fs8 
 \par \cf0\b\f1\fs20 Todos los reportes de errores, aportes y/o sugerencias para mejorar este software son siempre bienvenidos.
 \par El mejor m\'e9todo, es enviar el reporte de error,o tu sugerencia mediante nuestra interface de contacto, disponible en nuestra p\'e1gina Web:
-\par \tab\cf2\strike\f2 http://www.caespock.org/ircsoftware/\cf3\b0\strike0\f3\{link=\lang3082\f4 %\lang1034\f3 ! ExecFile("\lang3082 http://www.caespock.org/ircsoftware/\lang1034 ")\}
+\par \tab\cf3\lang3082\b0\{html=<a href="http://www.caespock.org/ircsoftware/" target="_blank">\cf2\b http://www.caespock.org/ircsoftware/\cf3\b0 </a>\}\lang1034\f2 
 \par \cf0\b\f1 
-\par \lang3082\f5 Es necesario que indique lo siguiente:
-\par \pard\fi-140\li400\cf1\lang1034\f1\'b7 \cf0\lang3082\f5 Sistema Operativo que usa (Windows \f6 7/8/10\f5 )
-\par \cf1\lang1034\f1\'b7 \cf0\lang3082\f6 Versi\'f3n del CaeScript
-\par \cf1\lang1034\f1\'b7 \cf0\lang3082\f6 Sintoma y descripci\'f3n de la falla.
+\par \lang3082\f3 Es necesario que indique lo siguiente:
+\par \pard\fi-140\li400\cf1\lang1034\f1\'b7 \cf0\lang3082\f3 Sistema Operativo que usa (Windows \f4 7/8/10\f3 )
+\par \cf1\lang1034\f1\'b7 \cf0\lang3082\f4 Versi\'f3n del CaeScript
+\par \cf1\lang1034\f1\'b7 \cf0\lang3082\f4 Sintoma y descripci\'f3n de la falla.
 \par \pard 
 \par \cf1\lang1034\f0 
-\par \cf2\lang3082\strike\f1 << Al \'cdndice\cf3\strike0\{linkID=%10\}\cf0\f6 
+\par \cf2\lang3082\strike\f1 << Al \'cdndice\cf3\strike0\{linkID=%10\}\cf0\f4 
 \par 
 \par \pard\fi-140\li400 
 \par }
@@ -3594,7 +3594,7 @@ FALSE
 \par Adicionalmente encontrar\'e1s los IRCopTools for mIRC (Ingl\'e9s)
 \par Todas las versiones para pIRCh y bITCHx han sido discontinuadas.\f0 
 \par \f1 La p\'e1gina en la que encontraras TODAS las versiones del CaeScript es:
-\par \cf2\strike\f2 http://www.caespock.org/ircsoftware/caescript.php\cf4\b0\strike0\{link=*! ExecFile("http://www.caespock.org/ircsoftware/caescript.php")\}\cf1\b\f1 
+\par \cf4\lang3082\b0\{html=<a href="http://www.caespock.org/ircsoftware/" target="_blank">\cf2\b http://www.caespock.org/ircsoftware/\cf4\b0 </a>\}\cf1\lang1034\b 
 \par \f0 
 \par \pard\cf2\lang3082\strike\f1 
 \par << Al \'cdndice\cf4\strike0\{linkID=%10\}\cf1\lang1034\f0 
@@ -3614,7 +3614,7 @@ Writing
 Acerca del Autor CAE Carlos Eduardo Aníbarro Anibarro
 FALSE
 24
-{\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fcharset0 Arial;}{\f2\fnil Courier New;}{\f3\fnil\fcharset0 Courier New;}{\f4\fnil\fcharset0 Arial;}{\f5\fswiss\fprq2\fcharset0 Arial;}}
+{\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fcharset0 Arial;}{\f2\fswiss\fprq2\fcharset0 Arial;}}
 {\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red0\green0\blue255;\red128\green0\blue0;\red255\green0\blue0;}
 \viewkind4\uc1\pard\cf1\f0\fs8 
 \par \pard\qc\cf2\b\fs40 Acerca del Autor\cf3\fs32 
@@ -3625,17 +3625,17 @@ FALSE
 \par Nac\'ed en La Paz Bolivia, la ciudad capital m\'e1s alta del mundo a 3670 metros sobre el nivel del mar.
 \par Soy Ingeniero en Sistemas de profesi\'f3n y un fan\'e1tico de todo lo que tenga que ver con innovaciones tecnol\'f3gicas, computaci\'f3n, comunicaci\'f3n y el Internet.
 \par Para encontrar m\'e1s informaci\'f3n, visita mi p\'e1gina personal ....
-\par \tab\cf2\strike\f2 http://www.caespock.org/\cf4\b0\strike0\{link=\lang1033\f3 *\lang1034\f2 ! ExecFile("http://www.caespock.org/")\}\cf1\b\f0 
+\par \tab\cf4\lang3082\b0\{html=<a href="http://www.caespock.org/" target="_blank">\cf2\b http://www.caespock.org/\cf4\b0 </a>\}\cf1\lang1034\b\f0 
 \par 
 \par \f1 o b\'fascame en l\'ednea .....\f0 
-\par \pard\li680 Estoy siempre en la red \cf2\strike\f4 DALnet\cf4\strike0\f2\{link=\lang3082\f3 %\lang1034\f2 ! ExecFile("http://www.dal.net/")\}\cf1\f0 , mi nick es CaeSpock.
+\par \pard\li680 Estoy siempre en la red \cf4\lang3082\b0\f1\{html=<a href="http://www.dal.net\lang1033 /\lang3082 " target="_blank">\cf2\b DALnet\cf4\b0 </a>\}\cf1\lang1034\b\f0 , mi nick es CaeSpock\lang1033\f1  o Cae\lang1034\f0 .
 \par \pard 
 \par \pard\qc\cf5\fs40 :)
 \par \pard\cf1\fs20 
 \par 
 \par 
 \par \cf2\lang3082\strike\f1 << Al \'cdndice\cf4\strike0\{linkID=%10\}\cf1\lang1034\f0 
-\par \cf0\lang3082\f5 
+\par \cf0\lang3082\f2 
 \par \cf1\lang1034\f0 
 \par }
 1
