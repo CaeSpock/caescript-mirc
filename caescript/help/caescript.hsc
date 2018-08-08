@@ -157,7 +157,7 @@ Writing
 
 Lo nuevo en CaeScript
 FALSE
-18
+17
 {\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fcharset0 Arial;}{\f2\fswiss\fprq2\fcharset0 Arial;}}
 {\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red128\green0\blue0;}
 \viewkind4\uc1\pard\cf1\f0\fs8 
@@ -165,9 +165,8 @@ FALSE
 \par \pard\cf1\b0\fs8 
 \par \cf3\fs20\{keepn\}\cf1 
 \par \b\fs8 
-\par \cf0\lang3082\f2\fs20 Para ver una lista de cambios seleccione:
-\par \pard\fi-120\li400\cf2\strike Lista de cambios dentro de la version CaeScript\cf3\strike0\{linkFile=ChangeLog.txt\}\cf0 
-\par \pard 
+\par \cf0\lang3082\f2\fs20 Para ver una lista de cambios puede abrir el fichero "ChangeLog.txt" que se encuentra en la carpeta del script.
+\par 
 \par Para ver el proyecto en GitHub puede acceder a:
 \par \cf3\b0\f1      \{html=<a href="https://github.com/CaeSpock/caescript-mirc" target="_blank">\cf2\b https://github.com/CaeSpock/caescript-mirc\cf3\b0 </a>\}\cf0\b\f2 
 \par 
@@ -3332,7 +3331,7 @@ Writing
 FALSE
 17
 {\rtf1\ansi\ansicpg1252\deff0\deflang1034{\fonttbl{\f0\fswiss Arial;}{\f1\fswiss\fcharset0 Arial;}}
-{\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red0\green128\blue128;\red128\green0\blue0;\red0\green128\blue0;}
+{\colortbl ;\red0\green0\blue0;\red0\green0\blue128;\red0\green128\blue128;\red128\green0\blue0;}
 \viewkind4\uc1\pard\cf1\f0\fs8 
 \par \pard\qc\cf2\b\f1\fs40 M\'f3dulo de IRCop\cf3\f0 
 \par \pard\cf1\b0\fs8 
@@ -3342,10 +3341,10 @@ FALSE
 \par 
 \par \f1 Los filtros fueron dise\'f1ados para DALnet.\f0 
 \par 
-\par Los comandos \lang3082\f1 est\'e1n descritos en:
-\par \pard\qc\cf5\strike Manual de IRCopTools\cf4\strike0\{linkFile=..\\ircoptools\\ircoptools.chm\}\cf0 
-\par \pard\cf1\lang1034\f0 
-\par \cf2\lang3082\strike\f1 << Al \'cdndice\cf4\strike0\{linkID=%10\}\cf1\lang1034\f0 
+\par Los comandos \lang3082\f1 est\'e1n descritos en el propio manual del m\'f3dulo.
+\par 
+\par 
+\par \cf2\strike << Al \'cdndice\cf4\strike0\{linkID=%10\}\cf1\lang1034\f0 
 \par \cf0 
 \par }
 1060
