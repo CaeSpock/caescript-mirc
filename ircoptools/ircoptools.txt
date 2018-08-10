@@ -1,5 +1,5 @@
 
-                        IRCopTools 6.0
+                        IRCopTools 7.0
                            for  mIRC
                ------------------------------
 
