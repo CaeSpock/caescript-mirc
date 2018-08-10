@@ -1,6 +1,10 @@
+2018.08.12: IRCopTools 7.0
+  . Release
 2018.07.28: IRCopTools 7.0b2
   . Changed absolute path references to relative references
   . Cleaned a bit the code
+  . Code available in github
+    https://github.com/CaeSpock/caescript-mirc
 2018.07.14: IRCOpTools 7.0b1
   . Re started coding
   . Fixed some small coding.

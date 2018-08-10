@@ -1,11 +1,13 @@
-; IRCopTools 7.0b2
-; - part of CaeScript 7.0b2
+; IRCopTools 7.0
+; - part of CaeScript 7.0
 ; by CaeSpock 
+;- More Info
+;  http://www.caespock.org/ircsoftware/
 ;
 ; #### REMOTES ####                                                                                                 
 ;
 on *:LOAD:{
-  .set %version.ircoptools IRCopTools 7.0b2
+  .set %version.ircoptools IRCopTools 7.0
   .load -rs " $+ $scriptdir $+ windowfilter.mrc $+ "
   if ($version >= 6.03 ) {
     .echo -s 2[N] 5-----------------------------------------

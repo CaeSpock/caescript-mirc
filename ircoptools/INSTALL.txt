@@ -1,0 +1,23 @@
+IRCopTools 7.0
+--------------
+This is a Windows script. It runs on Windows.
+This is a script for mIRC. You need to download mIRC from https://www.mirc.co.uk/
+
+Best is to install the script from the EXE Installer
+
+Manual Installation
+-------------------
+Uncompress inside mIRC's Application Data directory: %appdata%\mirc
+If you open %appdata%\mIRC it will usually open C:\Users\%user%\AppData\Roaming\mIRC
+where you need to download the script source.
+That will create a subdirectory named ircoptools (ie: c:\Users\%user%\AppData\Roaming\mIRC\ircoptools\)
+
+That's it! Now in mIRC once connected you have to load the tools with the following command:
+    /load -rs ircoptools\ircoptools.mrc
+
+Feel free to add this line to your perform list too.
+
+If you want to configure your IRCopTools, press F3 or type:
+   /configure
+
+
