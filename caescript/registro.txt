@@ -1,8 +1,8 @@
 ------------------------------
-REGISTRO PARA "CaeScript 6.0"
+REGISTRO PARA "CaeScript 7.0"
 ------------------------------
 
-Por favor incluya mi registro de uso del "CaeScript 6.0"
+Por favor incluya mi registro de uso del "CaeScript 7.0"
 Es gratuito !!
 
 Por favor llene TODOS los campos del siguiente bloque:
@@ -13,7 +13,7 @@ NOMBRE:
 
 E-Mail: 
 
-Versión: 6.0
+Versión: 7.0
 
 De qué país es usted?: 
 

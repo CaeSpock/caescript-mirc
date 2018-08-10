@@ -1,3 +1,8 @@
+2018.08.12. CaeScript 7.0
+  . Lanzamiento
+2018.08.06 CaeScript 7.0 b3
+  . Adicione un pequeño cambio para que se use el formato blanco y negro en
+    /ops y /opsv si se detecta que el canal tiene +c (Evita colores).
 2018.07.28 CaeScript 7.0 b2
   . Algunos errores de paths corregidos.
     Ya no se hace referencia a paths absolutos
@@ -7,6 +12,7 @@
   . Versión mínima requerida de mIRC : 7
   . Corrección de errores
   . Re organización del código para distribuirlo en Git
+    https://github.com/CaeSpock/caescript-mirc
 2014.02.13 CaeScript 6.0
   . Lanzamiento
 2013.06.03 CaeScript 6.0 Beta 2

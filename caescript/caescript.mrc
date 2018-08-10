@@ -1,9 +1,9 @@
 ;
-; CaeScript 7.0b2
+; CaeScript 7.0
 ; por CaeSpock
 ;
 ; Para cargarlo teclea:
-;  /load -rs caescript.mrc
+;  /load -rs caescrupt/caescript.mrc
 ;
 ; Para más información ve a:
 ;   http://www.caespock.org/ircsoftware/
@@ -23,7 +23,7 @@ on *:LOAD:{
  ; #### Asignación de Variables a partir de lo configurado
  ; #### en CaeScript\variables.ini
  ;
- .set %version.caescript CaeScript 7.0b2
+ .set %version.caescript CaeScript 7.0
  if $version >= 7.52 {
   .set %caescript.activo 1
   if !$isfile( $mircdir $+ caescript\variables.ini ) {

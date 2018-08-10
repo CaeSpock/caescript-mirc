@@ -1,0 +1,24 @@
+CaeScript 7.0
+-------------
+Este es un script Windows, corre sobre Windows.
+Este es un script para mIRC. Necesitas descargar mIRC desde https://www.mirc.co.uk/
+
+Lo mejor es instalar el script desde el instalador EXE.
+
+Instalación Manual
+------------------
+Descomprima en el directorio de datos de aplicación de mIRC: %appdata%\mirc
+Si abre %appdata%\mirc generalmente abrirá C:\Users\%user%\AppData\Roaming\mIRC
+Donde debe descagar el código fuente del script.
+Esto creará un subdirectorio para el script c:\Users\%user%\AppData\Roaming\mIRC\caescript\ y 
+también otro subdirectorio para los IRCopTools c:\Users\%user%\AppData\Roaming\mIRC\ircoptools\
+
+Listo! Ahora en mIRC una vez que te conectes debes cargar el scriptcon el siguiente comando:
+    /load -rs caescript\caescript.mrc
+
+Si deseas, puedes adicionar esta línea a tu lista "perform" en mIRC.
+
+Si deseas configurar CaeScript, presiona F2 o teclea:
+   /configurar
+
+

@@ -623,9 +623,23 @@ alias o {
   /mode # +ooooooo $1-
 }
 alias onotice { /onotice # %formatoops $1-  }
-alias ops { /onotice $1- }
-alias ops2 { .raw notice @ $+ # : $+ %formatoops.bnegro $1-  | /echo # -> Ops # $+ : %formatoops.bnegro $1- }
-alias opsv { .raw notice @+ $+ # : $+ %formatoopsv $1-  | /echo # -> Opsv # $+ : %formatoopsv $1- }
+alias ops { 
+  if (c isin $chan(#).mode) {
+    .raw notice @ $+ # : $+ %formatoops.bnegro $1-  | /echo -t # -> Ops # $+ : %formatoops.bnegro $1-
+  }
+  else {
+    /onotice $1-
+  }
+}
+alias ops2 { .raw notice @ $+ # : $+ %formatoops.bnegro $1-  | /echo -t # -> Ops # $+ : %formatoops.bnegro $1- }
+alias opsv { 
+  if (c isin $chan(#).mode) {
+    .raw notice @+ $+ # : $+ %formatoopsv.bnegro $1-  | /echo -t # -> Opsv # $+ : %formatoopsv.bnegro $1-
+  }
+  else {
+    .raw notice @+ $+ # : $+ %formatoopsv $1-  | /echo -t # -> Opsv # $+ : %formatoopsv $1-
+  }
+}
 alias opsv2 { .raw notice @+ $+ # : $+ %formatoopsv.bnegro $1-  | /echo # -> Opsv # $+ : %formatoopsv.bnegro $1- }
 alias part { 
   if ($active != Status Window ) {
