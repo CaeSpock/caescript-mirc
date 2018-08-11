@@ -52,31 +52,18 @@ VersionInfoTextVersion=CaeScript 7.0
 UninstallDisplayIcon={app}\caescript\caescript.icl,15
 VersionInfoProductName=CaeScript
 VersionInfoProductVersion=7.0
+AlwaysShowComponentsList=true
+EnableDirDoesntExistWarning=true
+AllowUNCPath=false
 
 [Languages]
 Name: "spanish"; MessagesFile: "compiler:Languages\Spanish.isl"
 
 [Dirs]
+Name: "{app}\ircoptools"
 Name: "{app}\caescript"
 Name: "{app}\caescript\addons"
 Name: "{app}\caescript\ascii"
-Name: "{app}\caescript\help"
-Name: "{app}\caescript\iss"
-Name: "{app}\caescript\poemas"
-Name: "{app}\caescript\sounds"
-Name: "{app}\caescript\temas"
-Name: "{app}\caescript\temas\caescript"
-Name: "{app}\ircoptools"
-Name: "{app}\ircoptools\help"
-Name: "{app}\ircoptools\iss"
-Name: "{app}\ircoptools"
-Name: "{app}\ircoptools\help"
-Name: "{app}\ircoptools\iss"
-Name: "{app}\caescript"
-Name: "{app}\caescript\addons"
-Name: "{app}\caescript\ascii"
-Name: "{app}\caescript\help"
-Name: "{app}\caescript\iss"
 Name: "{app}\caescript\poemas"
 Name: "{app}\caescript\sounds"
 Name: "{app}\caescript\temas"
@@ -92,12 +79,6 @@ Source: "ircoptools\ircoptools.ini"; DestDir: "{app}\ircoptools"; Flags: ignorev
 Source: "ircoptools\ircoptools.mrc"; DestDir: "{app}\ircoptools"; Flags: ignoreversion
 Source: "ircoptools\ircoptools.txt"; DestDir: "{app}\ircoptools"; Flags: ignoreversion
 Source: "ircoptools\windowfilter.mrc"; DestDir: "{app}\ircoptools"; Flags: ignoreversion
-Source: "ircoptools\help\CaePic.jpg"; DestDir: "{app}\ircoptools\help"; Flags: ignoreversion
-Source: "ircoptools\help\clones.bmp"; DestDir: "{app}\ircoptools\help"; Flags: ignoreversion
-Source: "ircoptools\help\ircoptools-logo.jpg"; DestDir: "{app}\ircoptools\help"; Flags: ignoreversion
-Source: "ircoptools\help\ircoptools.chm"; DestDir: "{app}\ircoptools\help"; Flags: ignoreversion
-Source: "ircoptools\help\ircoptools.hsc"; DestDir: "{app}\ircoptools\help"; Flags: ignoreversion
-Source: "ircoptools\help\statsl2.bmp"; DestDir: "{app}\ircoptools\help"; Flags: ignoreversion
 Source: "caescript\aliases.mrc"; DestDir: "{app}\caescript"; Flags: ignoreversion
 Source: "caescript\autoexec.txt"; DestDir: "{app}\caescript"; Flags: ignoreversion
 Source: "caescript\caescript.chm"; DestDir: "{app}\caescript"; Flags: ignoreversion
@@ -192,17 +173,6 @@ Source: "caescript\ascii\tucan.txt"; DestDir: "{app}\caescript\ascii"; Flags: ig
 Source: "caescript\ascii\unicornio.txt"; DestDir: "{app}\caescript\ascii"; Flags: ignoreversion
 Source: "caescript\ascii\woods.txt"; DestDir: "{app}\caescript\ascii"; Flags: ignoreversion
 Source: "caescript\ascii\yoytu.txt"; DestDir: "{app}\caescript\ascii"; Flags: ignoreversion
-Source: "caescript\help\CaePic.jpg"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\help\caescript.chm"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\help\caescript.hsc"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\help\logo-caescript.jpg"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\help\merlin.bmp"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\help\peedy.bmp"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\help\pop.bmp"; DestDir: "{app}\caescript\help"; Flags: ignoreversion
-Source: "caescript\iss\bienvenida.txt"; DestDir: "{app}\caescript\iss"; Flags: ignoreversion
-Source: "caescript\iss\infoantes.txt"; DestDir: "{app}\caescript\iss"; Flags: ignoreversion
-Source: "caescript\iss\infodespues.txt"; DestDir: "{app}\caescript\iss"; Flags: ignoreversion
-Source: "caescript\iss\licencia.txt"; DestDir: "{app}\caescript\iss"; Flags: ignoreversion
 Source: "caescript\poemas\amiga.poe"; DestDir: "{app}\caescript\poemas"; Flags: ignoreversion
 Source: "caescript\poemas\brillojo.poe"; DestDir: "{app}\caescript\poemas"; Flags: ignoreversion
 Source: "caescript\poemas\buscan.poe"; DestDir: "{app}\caescript\poemas"; Flags: ignoreversion
