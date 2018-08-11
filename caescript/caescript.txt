@@ -1,5 +1,5 @@
 
-                        CaeScript 6.0
+                        CaeScript 7.0
                           para  mIRC
                ------------------------------
 
