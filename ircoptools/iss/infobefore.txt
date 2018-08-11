@@ -1,0 +1,9 @@
+IRCopTools 7.0
+
+Thanks for installing IRCopTools 7.0.
+
+IMPORTANT: Please install this tools in your current mIRC roaming directory.
+
+Have fun!
+
+CaeSpock

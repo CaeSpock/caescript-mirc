@@ -1,0 +1,7 @@
+CaeScript/IRCopTools License
+
+1. Based in GPL v3.
+2. You can use this script for the time you want, as long as you respect any part of the authorship information. Respect the complete and the individual authorship.
+2. This script is provided as is and how it is. The author takes no charge of any damage of any kind. Using this software you agree to the terms established here.
+3. The distribution of this script is limited to distribute the executable file, which garantizes that the file has not being modified. If you want to access the source code, you can find it in our GitHub page: https://github.com/CaeSpock/caescript-mirc
+4. The licence of CaeScript or IRCopTools is diferent from the mIRC licence (shareware).

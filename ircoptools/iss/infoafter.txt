@@ -1,0 +1,12 @@
+Heya
+
+Thanks for installing IRCopTools 7.0
+
+To load these IRCopTools, once connected type:
+
+	/load -rs ircoptools\ircoptools.mrc
+
+You can add this line to your perform list too.
+
+Hugs
+       CaeSpock !
