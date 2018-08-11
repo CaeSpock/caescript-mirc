@@ -1,0 +1,11 @@
+Gracias por instalar CaeScript 7.0
+
+Para cargar este script, una vez conectado, teclea:
+
+	/load -rs caescript.mrc
+
+Puedes adicionar esta linea a tu lista de perform.
+
+Saludos
+
+       CaeSpock !

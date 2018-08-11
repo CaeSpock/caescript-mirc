@@ -1,0 +1,12 @@
+Licencia del CaeScript
+----------------------
+
+Este software cumple con los siguientes puntos:
+
+1. Esta basado en las directivas GPL v3
+2. Es FreeWare de uso libre. Es decir, cualquier usuario puede usar este software por el tiempo que desee, mientras respete la autoría intelectual e ideal individual de cada uno de los procesos incluidos en este software.
+3. Este software es provisto COMO ES Y TAL ES. El autor no acepta responsabilidad de daños en ningún modo. Usando este software, usted está de acuerdo con los términos establecidos acá y en la demás documentación.
+4. El autor no se responsabiliza por problemas en la instalación del paquete y tampoco está obligado a dar soporte ni ayuda en la instalación del script, manejo del paquete o ejecución.
+4. La distribución esta condicionada a pasar el archivo ejecutable (instalador) de este software, lo que garantiza que el código no haya sido modificado. Si desea acceder al código fuente, lo puede encontrar en nuestra página de GitHub: https://github.com/CaeSpock/caescript-mirc
+5. Por favor note que la licencia del CaeScript es diferente a la licencia individual de los programas pIRCh, mIRC, irssi y bitchX.
+

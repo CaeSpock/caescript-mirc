@@ -1,0 +1,10 @@
+CaeScript 7.0
+
+Gracias por instalar CaeScript 7.0.
+Esta version incluye IRCopTools 7.0
+
+IMPORTANTE: Por favor instale CaeScript en el directorio roaming de los datos de aplicación en el que se encuentra instalada su copia de mIRC.
+
+Diviértete!
+
+CaeSpock
