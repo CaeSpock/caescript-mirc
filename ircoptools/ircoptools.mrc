@@ -2533,6 +2533,9 @@ on ^*:PONG:{
 on *:INPUT:@ChatOps:if ( !$regex($1-,^/) ) { chatops $1- | halt }
 on *:INPUT:@Global Operator Notices:if ( !$regex($1-,^/) ) { globops $1- | halt }
 on *:INPUT:@Local Operator Notices:if ( !$regex($1-,^/) ) { locops $1- | halt }
+on *:INPUT:OperServ:if (!$regex($1-,^/)) { .operserv $1- | halt }
+on *:INPUT:RootServ:if (!$regex($1-,^/)) { .rootserv $1- | halt }
+on *:INPUT:OperServ2:if (!$regex($1-,^/) ) { .raw privmsg operserv2 : $+ $1- | halt }
 ;
 ; #### Dialogs
 ;
@@ -3374,9 +3377,6 @@ on *:INPUT:ChanServ:if ($left($1-,1) != /) { .chanserv $1- | halt }
 on *:INPUT:MemoServ:if ($left($1-,1) != /) { .memoserv $1- | halt }
 on *:INPUT:HelpServ:if ($left($1-,1) != /) { .raw privmsg helpserv : $+ $1- | halt }
 on *:INPUT:StatServ:if ($left($1-,1) != /) { .raw privmsg statserv : $+ $1- | halt }
-on *:INPUT:OperServ:if (!$regex($1-,^/)) { .operserv $1- | halt }
-on *:INPUT:RootServ:if (!$regex($1-,^/)) { .rootserv $1- | halt }
-on *:INPUT:OperServ2:if (!$regex($1-,^/) ) { .raw privmsg operserv2 : $+ $1- | halt }
 #caescriptfunctions end
 ;
 ; #### Answer to CLSCAN ####
