@@ -1,6 +1,6 @@
 ;
 ; #### AddOn para DALnet ####
-; #### Versión 1.2 por CaeSpock
+; #### Versión 1.3 por CaeSpock
 ; #### Distribuido con CaeScript
 ;
 on *:LOAD:{
@@ -25,11 +25,8 @@ alias DALnet {
 on *:INPUT:NickServ:if ($left($1-,1) != /) { .nickserv $1- | halt }
 on *:INPUT:ChanServ:if ($left($1-,1) != /) { .chanserv $1- | halt }
 on *:INPUT:MemoServ:if ($left($1-,1) != /) { .memoserv $1- | halt }
-on *:INPUT:OperServ:if ($left($1-,1) != /) { .operserv $1- | halt }
-on *:INPUT:RootServ:if ($left($1-,1) != /) { .raw privmsg rootserv : $+ $1- | halt }
 on *:INPUT:HelpServ:if ($left($1-,1) != /) { .raw privmsg helpserv : $+ $1- | halt }
 on *:INPUT:StatServ:if ($left($1-,1) != /) { .raw privmsg statserv : $+ $1- | halt }
-on *:INPUT:OperServ2:if ($left($1-,1) != /) { .raw privmsg operserv2 : $+ $1- | halt }
 ;
 ; ### PopUps
 ;
