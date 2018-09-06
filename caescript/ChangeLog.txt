@@ -1,3 +1,8 @@
+2018.09.06: CaeScript 7.1 b1
+  . Modificado el addon de DALnet
+    Se modificaron varios filtros ON INPUT para evitar que se 
+    repitan mensajes, cuando el IRCopTools está activado
+    
 2018.08.12. CaeScript 7.0
   . Lanzamiento
 2018.08.06 CaeScript 7.0 b3
