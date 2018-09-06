@@ -1,5 +1,5 @@
-; IRCopTools 7.0
-; - part of CaeScript 7.0
+; IRCopTools 7.1b1
+; - part of CaeScript 7.1b1
 ; by CaeSpock 
 ;- More Info
 ;  http://www.caespock.org/ircsoftware/
@@ -7,7 +7,7 @@
 ; #### REMOTES ####                                                                                                 
 ;
 on *:LOAD:{
-  .set %version.ircoptools IRCopTools 7.0
+  .set %version.ircoptools IRCopTools 7.1b1
   .load -rs " $+ $scriptdir $+ windowfilter.mrc $+ "
   if ($version >= 6.03 ) {
     .echo -s 2[N] 5-----------------------------------------
@@ -128,6 +128,8 @@ on *:LOAD:{
     }
     if ( %version.caescript == $null ) {
       .enable #caescriptfunctions
+    } else {
+      .disable #caescriptfunctions
     }
   }
   else {
@@ -2531,11 +2533,6 @@ on ^*:PONG:{
 on *:INPUT:@ChatOps:if ( !$regex($1-,^/) ) { chatops $1- | halt }
 on *:INPUT:@Global Operator Notices:if ( !$regex($1-,^/) ) { globops $1- | halt }
 on *:INPUT:@Local Operator Notices:if ( !$regex($1-,^/) ) { locops $1- | halt }
-on *:INPUT:OperServ:if (!$regex($1-,^/)) { .operserv $1- | halt }
-on *:INPUT:RootServ:if (!$regex($1-,^/)) { .rootserv $1- | halt }
-on *:INPUT:OperServ2:if (!$regex($1-,^/) ) { .raw privmsg operserv2 : $+ $1- | halt }
-on *:INPUT:HelpServ:if (!$regex($1-,^/) ) { .helpserv $1- | halt }
-on *:INPUT:StatServ:if (!$regex($1-,^/) ) { .statserv $1- | halt }
 ;
 ; #### Dialogs
 ;
@@ -3377,6 +3374,9 @@ on *:INPUT:ChanServ:if ($left($1-,1) != /) { .chanserv $1- | halt }
 on *:INPUT:MemoServ:if ($left($1-,1) != /) { .memoserv $1- | halt }
 on *:INPUT:HelpServ:if ($left($1-,1) != /) { .raw privmsg helpserv : $+ $1- | halt }
 on *:INPUT:StatServ:if ($left($1-,1) != /) { .raw privmsg statserv : $+ $1- | halt }
+on *:INPUT:OperServ:if (!$regex($1-,^/)) { .operserv $1- | halt }
+on *:INPUT:RootServ:if (!$regex($1-,^/)) { .rootserv $1- | halt }
+on *:INPUT:OperServ2:if (!$regex($1-,^/) ) { .raw privmsg operserv2 : $+ $1- | halt }
 #caescriptfunctions end
 ;
 ; #### Answer to CLSCAN ####
