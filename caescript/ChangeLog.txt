@@ -1,3 +1,6 @@
+2018.10.09: CaeScript 7.1 b2
+  . Se adicionaron los RAW 309 y 310 para el WHOIS, de acuerdo al nuevo Bahamut 2.1.0+
+
 2018.09.06: CaeScript 7.1 b1
   . Modificado el addon de DALnet
     Se modificaron varios filtros ON INPUT para evitar que se 

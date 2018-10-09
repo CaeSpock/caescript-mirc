@@ -1176,6 +1176,7 @@ alias whois2 { .echo -a  $+ %color.titulo2 $+ [N]      Procesando Whois a $1 |
 #whois.aca off
 raw 301:*:{  .echo -a 2 $+ $2 esta away: $3- | halt }
 raw 307:*:{ .echo -a 2 $+ $2  $+ $3- | halt }
+raw 309:*:{ .echo -a 2 $+ $2  $+ $3- | halt }
 raw 310:*:{ .echo -a 2 $+ $2  $+ $3- | halt }
 raw 311:*:{ .echo -a 2 $+ $2 es $3 $+ @ $+ $4- | halt }
 raw 312:*:{ .echo -a 2 $+ $2 usando $3- | halt }
