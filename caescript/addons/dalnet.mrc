@@ -1,6 +1,6 @@
 ;
 ; #### AddOn para DALnet ####
-; #### Versión 1.3 por CaeSpock
+; #### Versión 1.4 por CaeSpock
 ; #### Distribuido con CaeScript
 ;
 on *:LOAD:{
@@ -14,7 +14,7 @@ on *:UNLOAD:{
 alias DALnet { 
  if (dal.net isin $server) {
   echo 2[N] Si estás en DALnet ( $+ $server $+ ). 
-  .agentehablar DALnet la red de I R C
+  .agentehablar DALnet la red de IRC
  }
  else {
   echo 2[N] No estás en DALnet ( $+ $server $+ ).
@@ -88,6 +88,26 @@ DALnet
 ..OP
 ...OP:/chanserv OP $input(Entra el nombre del canal - No olvides el #,ei,Operacion con el ChanServ) $input(Ingresa el nick,1)
 ...DeOP:/chanserv DEOP $input(Entra el nombre del canal - No olvides el #,ei,Operacion con el ChanServ) $input(Ingresa el nick,1)
+..XFlag
+...Ver Valores:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ)
+...Configurar opciones por Defecto:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) DEFAULT
+...Configurar opciones recomendadas:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) RECOMMENDED
+...Nro Segundos que el usuario debe estar en línea para poder ingresar al canal:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) JOIN_CONNECT_TIME $+ : $+ $input(Numero de segundos,ei,XFLAG del ChanServ)
+...Nro Segundos que el usuario debe estar en línea para poder hablar en el canal:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) TALK_CONNECT_TIME $+ : $+ $input(Numero de segundos,ei,XFLAG del ChanServ)
+...Nro Segundos que el usuario debe estar en el canal para poder hablar en el canal:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) TALK_JOIN_TIME $+ : $+ $input(Numero de segundos,ei,XFLAG del ChanServ)
+...No se pueden enviar "notices" al canal:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) NO_NOTICE $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...No se pueden enviar "CTCPs" al canal:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) NO_CTCP $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...No se pueden enviar mensajes de salida del canal(PART):/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) NO_PART_MSG $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...No se pueden enviar mensajes de salida del irc(QUIT):/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) NO_QUIT_MSG $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...No se permiten los cambios de nick en este canal:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) NO_NICK_CHANGE $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...No se permiten menajes con caracteres raros (Hebreo/Arabico/UTF8 serán bloqueados):/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) NO_UTF8 $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Esconder listas +b/+I/+e de los no ops:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) HIDE_MODE_LISTS $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Eximir usuarios con op:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) EXEMPT_OPPED $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Eximir usuarios con voice:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) EXEMPT_VOICED $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Eximir usuarios con ident:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) EXEMPT_IDENTD $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Eximir usuarios con registrados(+r):/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) EXEMPT_REGISTERED $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Eximir usuarios con que son +I's:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) EXEMPT_INVITES $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
+...Enviar mensajes de comandos fallados al canal #canal-relay:/chanserv XFLAG $input(Entra el nombre del canal - No olvides el #,ei,XFLAG de ChanServ) AUTOMSG $+ : $+ $input(ON/OFF,ei,XFLAG del ChanServ)
 .NickServ
 ..Ayuda:/nickserv help
 ..Registrar:/nickserv REGISTER $input(Ingresa la clave,pi,Operacion con el NickServ) $input(Ingresa tu dirección E-Mail,ei,Operacion con el NickServ)
