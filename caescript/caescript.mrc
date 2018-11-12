@@ -1,5 +1,5 @@
 ;
-; CaeScript 7.1b2
+; CaeScript 7.1b3
 ; por CaeSpock
 ;
 ; Para cargarlo teclea:
@@ -23,7 +23,7 @@ on *:LOAD:{
  ; #### Asignación de Variables a partir de lo configurado
  ; #### en CaeScript\variables.ini
  ;
- .set %version.caescript CaeScript 7.1b2
+ .set %version.caescript CaeScript 7.1b3
  if $version >= 7.52 {
   .set %caescript.activo 1
   if !$isfile( $mircdir $+ caescript\variables.ini ) {

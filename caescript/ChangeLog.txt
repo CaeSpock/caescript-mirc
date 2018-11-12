@@ -1,11 +1,13 @@
+2018.11.11: CaeScript 7.1 b3
+  . Se corrigieron algunos errores pequeños
+  . Se actualizó el módulo de DALnet para que esté de acuerdo con Bahamut 2.2.0+
+    Se adicionaron los XFLAG
 2018.10.09: CaeScript 7.1 b2
   . Se adicionaron los RAW 309 y 310 para el WHOIS, de acuerdo al nuevo Bahamut 2.1.0+
-
 2018.09.06: CaeScript 7.1 b1
   . Modificado el addon de DALnet
     Se modificaron varios filtros ON INPUT para evitar que se 
     repitan mensajes, cuando el IRCopTools está activado
-    
 2018.08.12. CaeScript 7.0
   . Lanzamiento
 2018.08.06 CaeScript 7.0 b3
