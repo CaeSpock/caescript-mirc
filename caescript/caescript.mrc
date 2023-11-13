@@ -1,5 +1,5 @@
 ;
-; CaeScript 7.1b3
+; CaeScript 8.0b1
 ; por CaeSpock
 ;
 ; Para cargarlo teclea:
@@ -23,7 +23,7 @@ on *:LOAD:{
  ; #### Asignación de Variables a partir de lo configurado
  ; #### en CaeScript\variables.ini
  ;
- .set %version.caescript CaeScript 7.1b3
+ .set %version.caescript CaeScript 8.0b1
  if $version >= 7.52 {
   .set %caescript.activo 1
   if !$isfile( $mircdir $+ caescript\variables.ini ) {
@@ -43,7 +43,6 @@ on *:LOAD:{
   .echo -s  $+ %color.titulo2 $+ [N]  $+ %color.titulo1 $+ -----------------------------------------
   .set %verdatos $readini caescript\variables.ini pantallas verdatos
   .set %lagmeter $readini caescript\variables.ini pantallas lagmeter
-  .set %mp3player $readini caescript\variables.ini pantallas mp3player
   .set %usarsonido $readini caescript\variables.ini general sonido
   if (%usarsonido != 1) {
     .echo -s 2[N] La opcion de usar sonido fue anulada ... Cancelando sonido de todo el sistema ...
@@ -77,14 +76,6 @@ on *:LOAD:{
   if %lagbartexto == $null { .set %lagbarfondo $rgb(255,255,255) }
   if %lagbarfondo == $null { .set %lagbarfondo $rgb(0,0,0) }
   if %lagbarfrente == $null { .set %lagbarfondo $rgb(215,215,215) }
-  .set %agentecargar $readini caescript\variables.ini Agente Agente
-  .set %ver.ms.agente $readini caescript\variables.ini Agente mostrarlo
-  .set %ver.siempre.ms.agente $readini caescript\variables.ini Agente versiempre
-  if (%ver.ms.agente == 0) {
-   .set %ver.siempre.ms.agente 0
-   .set %agentecargar default
-  }
-  .set %agentecargado 0
   .set %minsbanproteccion $readini caescript\variables.ini banproteccion minutosbanautomatico
   .set %banproteccion $calc(%minsbanproteccion * 60)
   .set %minstiempobantemporal $readini caescript\variables.ini bantemporal minutosbantemporal
@@ -103,18 +94,12 @@ on *:LOAD:{
   .set %videotexto $readini caescript\variables.ini video texto
   .set %pathvideo $readini caescript\variables.ini video path
   .set %formatotexto $readini caescript\variables.ini texto formato
-  .set %opscolor $readini caescript\variables.ini texto ops
   .set %formatoops.color  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Ops: $+ %color.titulo1 $+ ]
-  ; .set %formatoops.color [Ops:]
   .set %formatoops.bnegro [Ops:]
   .set %formatoopsv.color  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Ops+v: $+ %color.titulo1 $+ ]
-  ; .set %formatoopsv.color [Ops+v:]
   .set %formatoopsv.bnegro [Ops+v:]
-  if %opscolor == 1 { .set %formatoops %formatoops.color }
-  else { .set %formatoops %formatoops.bnegro }
-  .set %opsvcolor $readini caescript\variables.ini texto opsv
-  if %opsvcolor == 1 { .set %formatoopsv %formatoopsv.color }
-  else { .set %formatoopsv %formatoopsv.bnegro }
+  .set %formatoops %formatoops.color
+  .set %formatoopsv %formatoopsv.color
   .set %doblenotify $readini caescript\variables.ini texto notify
   .set %addondalnet $readini caescript\variables.ini addons dalnet
   .set %addoneggdrop $readini caescript\variables.ini addons eggdrop
@@ -247,6 +232,7 @@ on *:LOAD:{
   ;
   ; #### Una vez cargadas las variables, continuar con el Script
   ;
+  .play -es " $+ $mircdir $+ caescript\banner.txt" 10
   .inicio
  }
  else {
@@ -324,115 +310,6 @@ alias inicio {
  .load -rs caescript/addons/clonescan.mrc
  .titlebar %version.caescript Configurado para $me
  ;
- ; ### Si no tiene agente cargado, por mas de que la opcion
- ; ### de verlo este activa, desactivar.
- ;
- if $agentver <= 0 { 
-  .set %ver.ms.agente 0
- }
- ;
- ; ### Si mirc es inferior a 5.7 no puede mostrar
- ; ### El agente de MS
- ;
- if $version < 5.7 {
-  .set %ver.ms.agente 0
- }
- ;
- ; ### Si no hay un agente por defecto, significa 
- ; ### que no esta instalado
- ;
- if $agent(0).char == 0 {
-  .set %ver.ms.agente 0
- }
- ;
- ; ### Ahora veamos si reporta un Agente, pero NO tiene 
- ; ### Uno por defecto, buscarlo
- ; ### No queda otra! (Solo si la opcion de ver agente esta activa)
- ;
- if %ver.ms.agente > 0 {
-  if ( $agent(0).char == 0 ) && ( $agentver > 0 ) {
-   .echo -s  $+ %color.titulo2 $+ [N] Tienes el Ms Agent cargado, pero no un caracter por defecto.
-   .echo -s  $+ %color.titulo2 $+ [N] Ando buscando un agente en los drives C:\, D:\, E:\ y F:\
-   if $disk(C) {
-    if $findfile(c:\,*.acs,0) > 0 {
-     .set %agentecargar $findfile(c:\,*.acs,1)
-     .set %ver.ms.agente 1
-     goto salir
-    }
-   }
-   if $disk(D) {
-    if $findfile(d:\,*.acs,0) > 0 {
-     .set %agentecargar $findfile(d:\,*.acs,1)
-     .set %ver.ms.agente 1
-     goto salir
-    }
-   }
-   if $disk(E) {
-    if $findfile(e:\,*.acs,0) > 0 {
-     .set %agentecargar $findfile(e:\,*.acs,1)
-     .set %ver.ms.agente 1
-     goto salir
-    }
-   }
-   if $disk(F) {
-    if $findfile(f:\,*.acs,0) > 0 {
-     .set %agentecargar $findfile(f:\,*.acs,1)
-     .set %ver.ms.agente 1
-     goto salir
-    }
-   }
-   if $disk(G) {
-    if $findfile(g:\,*.acs,0) > 0 {
-     .set %agentecargar $findfile(g:\,*.acs,1)
-     .set %ver.ms.agente 1
-     goto salir
-    }
-   }
-   if $disk(H) {
-    if $findfile(h:\,*.acs,0) > 0 {
-     .set %agentecargar $findfile(h:\,*.acs,1)
-     .set %ver.ms.agente 1
-     goto salir
-    }
-   }
-   .echo -s  $+ %color.titulo2 $+ [N] Hmm Los archivos básicos de los Agentes de MS
-   .echo -s  $+ %color.titulo2 $+ [N] están instalados, pero no encuentro agentes,
-   .echo -s  $+ %color.titulo2 $+ [N] algo esta mal instalado, ni modo.
-   .echo -s  $+ %color.titulo2 $+ [N] Si no deseas que el script intente cargar un agente, desabilita
-   .echo -s  $+ %color.titulo2 $+ [N] la opción 'Mostrarlo' en /configurar
-   :salir
-  }
-  ;
-  .echo -s  $+ %color.titulo2 $+ [N] %version.caescript Cargado
-  ;
- }
- ;
- if %ver.ms.agente == 1 {
-  .echo -s  $+ %color.titulo2 $+ [N] Ms Agent Presente! 
-  .gunload caeagente
-  .set %agentecargado 0
-  if $version == 5.7 {
-   .gload caeagente " $+ %agentecargar $+ "
-   .set %agentecargado 1
-  }
-  else {
-   .gload -h caeagente " $+ %agentecargar $+ "
-   .set %agentecargado 1
-  }
-  .gshow caeagente 10 2
-  .set %visible.agente 1
-  .set %posagentex $calc($window(-1).w - $agent(caeagente).w)
-  .gmove caeagente %posagentex 2 10
-  .unset %posagentex
-  .gtalk caeagente Hola! Bienvenidos a %version.caescript por CaeSpock!
-  if %ver.siempre.ms.agente != 1 {
-   if $agentstat == 1 {
-    .ghide caeagente
-    .set %visible.agente 0
-   }
-  }
- }
- ;
  if %autoaway == 1 {
   .timerveraway 0 60 revisaridle
  }
@@ -485,7 +362,6 @@ alias advconfig {
 alias configurar { dialog -m pcontrol pcontrol }
 alias conf_pantalla { dialog -m cpantalla cpantalla }
 alias conf_general { dialog -m cgeneral cgeneral }
-alias conf_agentems { dialog -m cagentems cagentems }
 alias conf_bans { dialog -m cbans cbans }
 alias conf_away { dialog -m caway caway }
 alias conf_mp3 { dialog -m confmp3 confmp3 }
@@ -509,8 +385,6 @@ alias conf_grabar {
   .write " $+ %mircdir $+ caescript\variables.ini $+ " verdatos= $+ %verdatos
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Activar LagMeter
   .write " $+ %mircdir $+ caescript\variables.ini $+ " lagmeter= $+ %lagmeter
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Activar MP3 Player
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " mp3player= $+ %mp3player
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ;
   .write " $+ %mircdir $+ caescript\variables.ini $+ " [General]
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Usar sonido?
@@ -518,18 +392,6 @@ alias conf_grabar {
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; Descargar CaeScript al salir? Solo es util si tiene el CaeScript
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; habilitado para cargarse cada vez desde el perform
   .write " $+ %mircdir $+ caescript\variables.ini $+ " descargar= $+ %descargar
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ;
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " [Agente]
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Aca uno define si quiere ver al agente de MS (si es 
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; posible desplegarlo en tu sistema operativo).
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " Mostrarlo= $+ %ver.ms.agente
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Aca uno define si quiere ver al agente de MS siempre o
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; solo en algunas ocaciones
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " VerSiempre= $+ %ver.siempre.ms.agente
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [default/nombre] Aca uno define que agente de ms quiere ver
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; en caso de que tenga mas de uno.
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; ej: merlin.acs ej: default
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " Agente= $+ %agentecargar
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ;
   .write " $+ %mircdir $+ caescript\variables.ini $+ " [BanProteccion]
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; Cantidad en minutos del ban automatico
@@ -587,10 +449,6 @@ alias conf_grabar {
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0,1..18] Tipos de formato de texto. 0=normal
   .write " $+ %mircdir $+ caescript\variables.ini $+ " Formato= $+ %formatotexto
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ;
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Usar colores en el onotice?
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " Ops= $+ %opscolor
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Usar colores en el notice a ops y voiced?
-  .write " $+ %mircdir $+ caescript\variables.ini $+ " opsv= $+ %opsvcolor
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ; [0/1] Ver notify tambien en la ventana actual?
   .write " $+ %mircdir $+ caescript\variables.ini $+ " notify= $+ %doblenotify
   .write " $+ %mircdir $+ caescript\variables.ini $+ " ;
@@ -646,7 +504,7 @@ on *:dialog:pcontrol:init:0: {
 on *:dialog:pcontrol:*:*: {
  if ($devent == mouse) { if ($did == 4) { did -ra $dname 1 Configurción de Pantalla y Tema } }
  if ($devent == mouse) { if ($did == 6) { did -ra $dname 1 Configuraciones Generales } }
- if ($devent == mouse) { if ($did == 8) { did -ra $dname 1 Configuración del Agente de Microsoft } }
+ if ($devent == mouse) { if ($did == 8) { did -ra $dname 1 Configuración del Ex Ag } }
  if ($devent == mouse) { if ($did == 10) { did -ra $dname 1 Configuración de Bans } }
  if ($devent == mouse) { if ($did == 12) { did -ra $dname 1 Configuración del Sistema de Away } }
  if ($devent == mouse) { if ($did == 20) { did -ra $dname 1 Configuración de MP3 } }
@@ -681,16 +539,13 @@ on *:dialog:cpantalla:init:0: {
  did -f $dname 5
  if %verdatos == $null { .set %verdatos $readini caescript\default.ini pantallas verdatos }
  if %lagmeter == $null { .set %lagmeter $readini caescript\default.ini pantallas lagmeter }
- if %mp3player == $null { .set %mp3player $readini caescript\default.ini pantallas mp3player }
  if (%verdatos == 1) { did -c $dname 6 }
  if (%lagmeter == 1) { did -c $dname 7 }
- if (%mp3player == 1) { did -c $dname 8 }
 }
 on *:dialog:cpantalla:*:*: {
  if ($did == 4) && ($devent == sclick) { conf_tema }
  if ($did == 6) && ($devent == sclick) { .set %verdatos $did(6).state }
  if ($did == 7) && ($devent == sclick) { .set %lagmeter $did(7).state }
- if ($did == 8) && ($devent == sclick) { .set %mp3player $did(8).state }
 }
 dialog cgeneral {
  title Configuraciones generales
@@ -710,50 +565,6 @@ on *:dialog:cgeneral:init:0: {
 on *:dialog:cgeneral:*:*: {
  if ($did == 1) && ($devent == sclick) { .set %usarsonido $did(1).state }
  if ($did == 2) && ($devent == sclick) { .set %descargar $did(2).state }
-}
-dialog cagentems {
- title Configuración del Agente Microsoft
- icon caescript\caescript.icl, 12
- size -1 -1 130 60
- option dbu
- check "Mostrar siempre el Agente de Microsoft", 1, 10 2 102 10, flat
- check "Ver siempre al Agente", 2, 10 15 102 10, flat
- icon 3, 50 30 16 16, caescript\caescript.icl, 3
- text "Nombre del Agente a usar", 4, 40 46 40 16, center
-}
-on *:dialog:cagentems:init:0: {
- did -f $dname 3
- if %ver.ms.agente == $null { .set %ver.ms.agente $readini caescript\default.ini Agente mostrarlo }
- if %ver.siempre.ms.agente == $null { .set %ver.siempre.ms.agente $readini caescript\default.ini Agente versiempre }
- if (%ver.ms.agente == 1) { 
-  did -c $dname 1
- }
- else {
-  did -b $dname 2
-  did -b $dname 3
-  did -b $dname 4
- }
- if (%ver.siempre.ms.agente == 1) { did -c $dname 2 }
-}
-on *:dialog:cagentems:*:*: {
- if ($did == 1) && ($devent == sclick) { 
-  .set %ver.ms.agente $did(1).state
-  if ($did(1).state == 1) {
-   did -e cagentems 2
-   did -e cagentems 3
-   did -e cagentems 4
-  }
-  else {
-   .set %ver.siempre.ms.agente 0
-   .set %agentecargar default
-   did -u cagentems 2
-   did -b cagentems 2
-   did -b cagentems 3
-   did -b cagentems 4
-  }
- }
- if ($did == 2) && ($devent == sclick) { .set %ver.siempre.ms.agente $did(2).state }
- if ($did == 3) && ($devent == sclick) { conf_agenteusar }
 }
 dialog cbans {
  title Configuración de Bans
@@ -1003,8 +814,6 @@ dialog conftextos {
 }
 on *:dialog:conftextos:init:0: {
  if %formatotexto == $null { .set %formatotexto $readini caescript\default.ini texto formato }
- if %opscolor == $null { .set %opscolor $readini caescript\default.ini texto ops }
- if %opsvcolor == $null { .set %opsvcolor $readini caescript\default.ini texto opsv }
  if %doblenotify == $null { .set %doblenotify $readini caescript\default.ini texto notify }
  did -f $dname 1
  did -a $dname 2 Normal
@@ -1045,8 +854,6 @@ on *:dialog:conftextos:init:0: {
  if (%formatotexto == 16) { did -c $dname 2 17 }
  if (%formatotexto == 17) { did -c $dname 2 18 }
  if (%formatotexto == 18) { did -c $dname 2 19 }
- if (%opscolor == 1) { did -c $dname 3 }
- if (%opsvcolor == 1) { did -c $dname 4 }
  if (%doblenotify == 1) { did -c $dname 5 }
 }
 on *:dialog:conftextos:*:*: {
@@ -1087,21 +894,7 @@ on *:dialog:conftextos:*:*: {
  if %formatotexto == 13 { .texto13 }
  if %formatotexto == 14 { .texto14 }
  if %formatotexto == 15 { .texto15 }
- if ($did == 3) && ($devent == sclick) { .set %opscolor $did(3).state }
- if ($did == 4) && ($devent == sclick) { .set %opsvcolor $did(4).state }
  if ($did == 5) && ($devent == sclick) { .set %doblenotify $did(5).state }
- if %opscolor == 1 {
-  .set %formatoops %formatoops.color
- }
- else {
-  .set %formatoops %formatoops.bnegro
- }
- if %opsvcolor == 1 {
-  .set %formatoopsv %formatoopsv.color
- }
- else {
-  .set %formatoopsv %formatoopsv.bnegro
- }
 }
 dialog caddons {
  title Configuración de AddOns
@@ -1123,7 +916,7 @@ on *:dialog:caddons:*:*: {
  if ($did == 1) && ($devent == sclick) { .set %addondalnet $did(1).state }
  if ($did == 2) && ($devent == sclick) { .set %addoneggdrop $did(2).state }
 }
- 
+
 alias conf_tema {
   if %tema == $null { .set %tema $readini caescript\default.ini tema nombre }
   .set %tema $input(Introduzca el nombre del tema a ser usado,ei,Configuración CaeScript,%tema)
@@ -1133,10 +926,8 @@ alias conf_tema {
    .echo -s 2[N] Se reseteo el tema al valor por defecto, pues el directorio que especifico no existe.
   }
 }
-alias conf_agenteusar {
-  if %agentecargar == $null { .set %agentecargar $readini caescript\default.ini Agente Agente }
-  .set %agentecargar $input(Introduzca el nombre del agente de Microsoft a usar,ei,Configuración CaeScript,%agentecargar)
-  if %agentecargar == $null { .set %agentecargar $readini caescript\default.ini Agente Agente }
+alias conf_agentems {
+  .echo -s 2[N] Esta opcion ha sido desactivada.
 }
 alias conf_pathmp3 {
   if %pathmp3 == $null { .set %pathmp3 $readini caescript\default.ini mp3 path }
@@ -1171,8 +962,8 @@ alias ventanadatos {
   echo @CaeScript .                   $+ %color.titulo2 $+ MP3: ' $+ $sound(mp3) - %pathmp3 $+ '.
   echo @CaeScript . Ruta de Videos:' $+ %color.titulo2 $+ %pathvideo $+ '.
   echo @CaeScript . Tiempo de Bans:  $+ %color.titulo2 $+ Temporal: %minstiempobantemporal $+ m - Automatico: %minsbanproteccion $+ m
-  echo @CaeScript . Modulos:  $+ %color.titulo2 $+ LagMeter: %lagmeter - MP3 Player: %mp3player - AgenteMS: %ver.ms.agente $+ / $+ %agentecargar $+ / $+ %ver.siempre.ms.agente - Formato Texto: %formatotexto $+ 
-  echo @CaeScript .           $+ %color.titulo2 $+ Sonido: %usarsonido - AutoAway: %autoaway $+ / $+ %minsautoaway $+ m/ $+ %mostraraway - Color Ops/Voice: %opscolor $+ / $+ %opsvcolor $+ 
+  echo @CaeScript . Modulos:  $+ %color.titulo2 $+ LagMeter: %lagmeter - Formato Texto: %formatotexto $+ 
+  echo @CaeScript .           $+ %color.titulo2 $+ Sonido: %usarsonido - AutoAway: %autoaway $+ / $+ %minsautoaway $+ m/ $+ %mostraraway $+ 
   echo @CaeScript .  $+ %color.titulo1 $+ ----------------------------------------------
   echo @CaeScript . Para cerrar este programa, teclee: ' $+ %color.titulo2 $+ /cerrar $+ ' en la ventana de comandos.
   echo @CaeScript . Para configurar este programa, teclee: ' $+ %color.titulo2 $+ /configurar $+ ' en la ventana de comandos.
@@ -1183,10 +974,6 @@ alias ventanadatos {
 }
  
 alias cerrar {
- if %ver.ms.agente == 1 {
-  .set %agentecargado 0
-  .gunload caeagente
- }
  if %verdatos == 1 {
   .echo @CaeScript . Cerrando 2mIRC y 1,1-6,4-8,8-9,9-0,1 %version.caescript 6,4-8,8-9,9-1,1-
  }
@@ -1198,27 +985,16 @@ alias reiniciar {
  .echo -s  $+ %color.titulo2 $+ [N] Al terminar de descargar %version.caescript, ejecute la linea
  .echo -s  $+ %color.titulo2 $+ [N] /load -rs caescript.mrc
  .echo -s  $+ %color.titulo2 $+ [N] en su ventana de texto, para reiniciar el Script.
- .editbox -a /load -rs caescript.mrc
+ .editbox -a /load -rs caescript/caescript.mrc
  .descargar
 }
 
 alias quit { 
  if $1- { 
-  if %ver.ms.agente == 1 {
-   if $agentver > 0 { 
-    if %visible.agente == 1 {
-     .ghide caeagente
-    }
-   }
-  }
   .raw quit : $+ $1- 2*6*2 %version.caescript 6*2*
  }
  else {
   .raw quit : $+ $read( $mircdir $+ caescript\frases.txt ) 2*6*2 %version.caescript 6*2*
-  if %ver.ms.agente == 1 {
-   .set %agentecargado 0
-   .gunload caeagente
-  }
  }
  haltdef
 }
@@ -1228,10 +1004,6 @@ alias descargar {
   .echo -s  $+ %color.titulo2 $+ [N]  $+ %color.titulo1 $+ -----------------------------------------
   .echo -s  $+ %color.titulo2 $+ [N] Descargando %version.caescript ....
   .echo -s  $+ %color.titulo2 $+ [N]  $+ %color.titulo1 $+ -----------------------------------------
-  if %ver.ms.agente == 1 {
-   .set %agentecargado 0
-   .gunload caeagente
-  }
   .texton
   .color Background %color.background
   .color Action text %color.action
@@ -1308,9 +1080,6 @@ alias descargar {
   .notify -r NickServ
   .notify -r ChanServ
   .notify -r MemoServ
-  .unload -rs caescript/addons/clonescan.mrc
-  .unload -rs caescript/addons/calc.mrc
-  .unload -rs caescript/addons/addons.mrc
   .unset %q
   .unset %c
   .unset %clones.nicks
@@ -1358,8 +1127,6 @@ alias descargar {
   .unset %formatoopsv.color
   .unset %formatoopsv.bnegro
   .unset %formatoopsv
-  .unset %opscolor
-  .unset %opsvcolor
   .unset %formatotexto
   .unset %doblenotify
   .unset %addondalnet
@@ -1373,9 +1140,6 @@ alias descargar {
   .unset %mp3texto
   .unset %mp3sonido
   .unset %mostraraway
-  .unset %agentecargar
-  .unset %ver.siempre.ms.agente
-  .unset %agentecargado
   .unset %autoaway
   .unset %minsautoaway
   .unset %segsautoaway
@@ -1388,7 +1152,6 @@ alias descargar {
   .unset %botones
   .unset %fondostatus
   .unset %fondo
-  .unset %mp3player
   .unset %lagmeter
   .unset %verdatos
   .unset %descargar
@@ -1397,8 +1160,6 @@ alias descargar {
     .vol -vu2
   }
   .unset %tema
-  .unset %visible.agente
-  .unset %ver.ms.agente
   .unset %minsbanproteccion
   .unset %banproteccion
   .unset %tipoban
@@ -1408,11 +1169,14 @@ alias descargar {
   .unset %valorpregunta
   .unset %canaltopic
   .unset %caescript.activo
-  .echo -s 2[N] %version.caescript descargado exitosamente .. Adios 
-  .unset %version.caescript
+  .unload -rs caescript/addons/addons.mrc
+  .unload -rs caescript/addons/calc.mrc
+  .unload -rs caescript/addons/clonescan.mrc
   .unload -rs caescript/popups.mrc
   .unload -rs caescript/aliases.mrc
-  .unload -rs caescript.mrc
+  .echo -s 2[N] %version.caescript descargado exitosamente .. Adios 
+  .unset %version.caescript
+  /unload -rs caescript.mrc
  }
  else {
   .unset %version.caescript

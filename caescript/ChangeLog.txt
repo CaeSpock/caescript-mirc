@@ -1,3 +1,13 @@
+2023.11.09: CaeScript 8.0b1
+  . Reinicio del codigo
+  . Menos es mas!
+  . Se removio soporte para Agente de MS
+  . Se removio addon mp3 player externo aamp
+  . Se depuro la desasignacion de variables
+  . Se elimino %formatoopscolor y %formatoopsvcolor pues hay
+    /ops2 y /opsv2 para blanco y negro
+  . Se han removido modulos que solo estaban haciendo de otra manera lo que mIRC hacia solo
+  . Actualizacion de algunos modulos con la nueva capacidad de mIRC
 2018.11.11: CaeScript 7.1 b3
   . Se corrigieron algunos errores pequeños
   . Se actualizó el módulo de DALnet para que esté de acuerdo con Bahamut 2.2.0+

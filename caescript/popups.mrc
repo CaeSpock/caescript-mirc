@@ -58,16 +58,6 @@ Modos del Usuario
 Páginas
 .DALnet:say La página oficial de DALnet es:2 http://www.dal.net/ .
 .CaeScript:say La página oficial del CaeScript es:2 http://www.caespock.org/ircsoftware/ .
-Agente Microsoft
-.Cargar:/acargar
-.Descargar:/adescargar
-.Mostrar:/amostrar
-.Ocultar:/aocultar
-.Hablar:/ahablar
-.Pensar:/apensar
-.Mover:/amover
-.Apuntar:/aapuntar
-.Acción:/aaccion
 -
 Canal
 .Info Canal:/channel #
@@ -139,10 +129,10 @@ Formato de Texto
 .Formato 17:/texto17
 .Formato 18:/texto18
 Personales
-.ASCII a #:/play # " $+ $sfile(%filtroascii,Escoge un ASCII,Mostrar) $+ " | .agentepensar Un poco de arte ASCII
+.ASCII a #:/play # " $+ $sfile(%filtroascii,Escoge un ASCII,Mostrar) $+ " 
 .Sonido a #:/sound # " $+ $sfile($sound(wav),Escoge un Sonido,Tocar) $+ " $input(Mensaje para el sonido,eq,CaeScript)
-.Chiste a #:/say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Chiste: $+ %color.titulo1 $+ ] $read( %filtrochistes ) | .agentepensar Hahaha buen chiste!
-.Frase Célebre a #:/say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Frase Célebre: $+ %color.titulo1 $+ ] $read( %filtrofrases ) | .agentepensar Excelente frase!
+.Chiste a #:/say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Chiste: $+ %color.titulo1 $+ ] $read( %filtrochistes ) 
+.Frase Célebre a #:/say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Frase Célebre: $+ %color.titulo1 $+ ] $read( %filtrofrases ) 
 .Abrazos a #
 ..Abrazar:say 12{{{{{{{5 # 12}}}}}}}
 ..Abrazar 2:/me 6®º°¨¨°º®4ABRAZO6®º°¨¨°º® 13 # 6®º°¨¨°º®4ABRAZO6®º°¨¨°º®
@@ -329,12 +319,12 @@ DCC
 ..Lista:/dccallow list
 ..Ayuda:/dccallow help
 Personales
-.ASCII a $snick(#,1):play $$1 " $+ $sfile(%filtroascii,Escoge un ASCII,Mostrar) $+ " | .agentepensar Un poco de arte ASCII
+.ASCII a $snick(#,1):play $$1 " $+ $sfile(%filtroascii,Escoge un ASCII,Mostrar) $+ " 
 .Sonido a $nick(#,1):/sound $$1 " $+ $sfile($sound(wav),Escoge un Sonido,Tocar) $+ " $input(Mensaje para el sonido,eq,CaeScript)
-.Chiste a $snick(#,1):/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Chiste: $+ %color.titulo1 $+ ] $read( %filtrochistes ) | .agentepensar Hahaha buen chiste!
-.Frase Célebre a $snick(#,1):/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Frase Célebre: $+ %color.titulo1 $+ ] $read( %filtrofrases ) | .agentepensar Excelente frase!
-.Piropo a $snick(#,1):/msg $$1 $read( %filtropiropos ) | .agentepensar Que lindo ... :)
-.Poema a $snick(#,1):play $$1 " $+ $sfile(%filtropoemas, Escoge un Poema, Mostrar) $+ " | .agentepensar Estos poemas nos inspiran la vida!
+.Chiste a $snick(#,1):/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Chiste: $+ %color.titulo1 $+ ] $read( %filtrochistes ) 
+.Frase Célebre a $snick(#,1):/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Frase Célebre: $+ %color.titulo1 $+ ] $read( %filtrofrases ) 
+.Piropo a $snick(#,1):/msg $$1 $read( %filtropiropos ) 
+.Poema a $snick(#,1):play $$1 " $+ $sfile(%filtropoemas, Escoge un Poema, Mostrar) $+ " 
 .Bienvenido a $snick(#,1)
 ..Caja:say 4,4 $$1  | say 8,4 $$1 1,1!1,0 Bienvenido(a) | say 4,4 $$1 1,1!1,0 a | say  1,1 $$1 1,0 #
 ..Vengas:say (¯`·.¸¸.-> Hola $$1 Feliz de que vengas por # ! <-.¸¸.·´¯)
@@ -460,16 +450,16 @@ Personales
 ...Crab:/me sneaks up behind4 $$1 12and slips a crab down his pants 4,1«0°°4»8
 ...TNT:say 1,4 D Y N A M I T E 5,0]5-------4.`,'.12 Here 4 $$1 12 !!! 12, CATCH !!!
 .Detalles de Amor a $snick(#,1)
-..Hola:/me se apresura y dice 2Hola $$1 4@3)-{-{-- | /sound $$1 kiss.wav Smuak! | .agentepensar Hmm siento el amor en el aire!
-..Me gustas mucho:/me te pregunta $$1 ... "Alguna vez te dije que me gustas mucho?" | .agentepensar Hmm siento el amor en el aire!
-..Mi corazón al verte:/me te pregunta $$1 .. "Sabes que cada vez que te veo mi corazon late mas rápido pero al ritmo del amor?" | .agentepensar Hmm siento el amor en el aire!
-..Caiste del cielo:/me te pregunta si te dolio? $$1 te dolio cuando caiste de las estrellas? | .agentepensar Hmm siento el amor en el aire!
-..Bombón al sol:/me te pide $$1 que cuando haga sol camines por la sombra... los bombones como tú se derriten al sol :) | .agentepensar Hmm siento el amor en el aire!
-..Belleza Pecado:/me dice $$1 si la belleza fuera pecado, tu tendrías el infierno asegurado :) | .agentepensar Hmm siento el amor en el aire!
-..Espejo:/me dice $$1 si agarraras 11 rosas en frente a un espejo, verías las 12 cosas más bellas del mundo! :) | .agentepensar Hmm siento el amor en el aire!
-..Flores:say 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- | .agentepensar Hmm siento el amor en el aire!
-..Amor:/me 4©5A4©5M4©5O4©5R4©2 $$1 44©5L4©5O4©5V4©5E4© | .agentepensar Hmm siento el amor en el aire!
-..Corre:/me corre rápidamente hacia $$1 para decirle delante de todo # ... Te amo y siempre estarás en mi corazon! :* | .agentepensar Hmm siento el amor en el aire!
+..Hola:/me se apresura y dice 2Hola $$1 4@3)-{-{-- | /sound $$1 kiss.wav Smuak! 
+..Me gustas mucho:/me te pregunta $$1 ... "Alguna vez te dije que me gustas mucho?" 
+..Mi corazón al verte:/me te pregunta $$1 .. "Sabes que cada vez que te veo mi corazon late mas rápido pero al ritmo del amor?" 
+..Caiste del cielo:/me te pregunta si te dolio? $$1 te dolio cuando caiste de las estrellas? 
+..Bombón al sol:/me te pide $$1 que cuando haga sol camines por la sombra... los bombones como tú se derriten al sol :) 
+..Belleza Pecado:/me dice $$1 si la belleza fuera pecado, tu tendrías el infierno asegurado :) 
+..Espejo:/me dice $$1 si agarraras 11 rosas en frente a un espejo, verías las 12 cosas más bellas del mundo! :) 
+..Flores:say 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- 
+..Amor:/me 4©5A4©5M4©5O4©5R4©2 $$1 44©5L4©5O4©5V4©5E4© 
+..Corre:/me corre rápidamente hacia $$1 para decirle delante de todo # ... Te amo y siempre estarás en mi corazon! :* 
 ..Musica:/musica $$1
 ..Corazones
 ...Corazones grandes:say 4(¯`·. (¯`·.   $$1 (¯`·. (¯`·. | say 4(_.·´ (_.·´   $$1 (_.·´ (_.·´
@@ -482,29 +472,29 @@ Personales
 ...Beso Pequeño:say 13,13.8,8.9,9.0,18 $me 0sopla0 un pequeño y dulce beso a0,1 (¯`·.¸¸.->4©8 $$1 4© 9,9.8,8.13,13.
 ..English
 ...Kisses
-....Kisses4:say 1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1'0,4 Kisses for you $$1  1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1' | .agentepensar I feel love in here!
-....KOTC:say 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8,2 Kiss on the cheek for you $$1 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8 | .agentepensar I feel love in here!
-....BlowKisses:/me 12blows some 4kisses your way 12»»--4(¯`°´¯)12=4(¯`°´¯)12---»»4 4 $$1  | .agentepensar I feel love in here!
-....kissnhug...:/me can't resist 4©1kissin'4©1 and 12{{1huggin'12}} 12{{4©4©1 $$1 4©4©12}} | .agentepensar I feel love in here!
-....kiss....:/me 2R3u4N13s6s12s13 14O2v3e4R5 6a12N13D14 2G3i4V5e6S  12{{4©4©1 $$1 4©4©12}} 1a 0,14*0B8*0I9*0G11*0 13*0K4*0I8*0S9*0S11*013*0 | .agentepensar I feel love in here!
-....kisskiss:say 4,1©8K4©8I4©8S4©8S4©9 $$1 4©8K4©8I4©8S4©8S4© | .agentepensar I feel love in here!
+....Kisses4:say 1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1'0,4 Kisses for you $$1  1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1' 
+....KOTC:say 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8,2 Kiss on the cheek for you $$1 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8 
+....BlowKisses:/me 12blows some 4kisses your way 12»»--4(¯`°´¯)12=4(¯`°´¯)12---»»4 4 $$1  
+....kissnhug...:/me can't resist 4©1kissin'4©1 and 12{{1huggin'12}} 12{{4©4©1 $$1 4©4©12}} 
+....kiss....:/me 2R3u4N13s6s12s13 14O2v3e4R5 6a12N13D14 2G3i4V5e6S  12{{4©4©1 $$1 4©4©12}} 1a 0,14*0B8*0I9*0G11*0 13*0K4*0I8*0S9*0S11*013*0 
+....kisskiss:say 4,1©8K4©8I4©8S4©8S4©9 $$1 4©8K4©8I4©8S4©8S4© 
 ...NiceWords
-....Heaven:/me checks2 $$1 $+ 's 4shirt tag1.. 2Hmm1.. 4Just as I thought1.. 4,2 ©0,2 Made in Heaven 4©1. | .agentepensar I feel love in here!
-....Mirror:/me says... $$1 if you held 11 roses in front of a mirror, you'd see the 12 most beautiful things in the world! :) | .agentepensar I feel love in here!
-....Hrtcrzy:say 13,1 $$1 you make my heart go ...... crazy !| 9,1/\________/\____/\___/\__/\_/\_/\_/\_/\...4©  | .agentepensar I feel love in here!
-....Hrtsing:say 4,1 W 811I 68 £ 9D  13,1 T 8H 14Ä 11N 0G  8,1 {{4 $$1 8}}  0,1 ¥9o8ü  3,1 M0Ä8k13E  10,1 M11¥  11,1 H39E4Ä7R8T  9,1 S8ì13N14G9,1! | .agentepensar I feel love in here!
-....Middlename:say 4,1 æè8,1øö0,1 ÐåÑgëR 4,1æè8,1øö15,1 is my middle name 0,1 $$1 $+ !!  4,1æè8,1øö  | .agentepensar I feel love in here!
-....Milk:say 2,2.0,0.2,2.0,0.2,2...0 $$1 2,2..8 My 4 NaMe 8 Is 0 MILK  8 I CaN Do YoUr 4BoDy 8GooD2,2...0,0.2,2.0,0.2,2. | .agentepensar I feel love in here!
-....Sweetest:say 0,1 >0--<8,1 $$1  9 you 11 are 13 just 9 the 8S9w13ë11ë8T9ë13§11T 9 thang 8!! 0,1 >0--<13  | .agentepensar I feel love in here!
-....Cute:/me says 2(¯`·.,¸¸,7{14=12^4;12^14=7} 3{{5 $$1 3}} 7{14=12^4;12^14=7}2,¸¸,.·´¯) 10 You're So CUTE!!! | .agentepensar I feel love in here!
-....PhoneNum:say 3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3'0,1  I seem to have lost my phone number $$1 $+ , can I borrow yours?  3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3' | .agentepensar I feel love in here!
-....Thief:say 4,4.0,0'4,0©© 4,4.0,1 I'm a thief, and I'm here to steal your heart $$1 $+ ! 4,4.0,0'4,0©©0,0'4,4. | .agentepensar I feel love in here!
-....Alien:say 3,1 x9,1(9-9×9-)3,1x 9Was you father an alien $$1 $+ ? 'Cuz there's nothing else like you on earth!3,1 x9,1(9-9×9-)3,1x  | .agentepensar I feel love in here!
-....FinePrint:say 2,2'12,12'11,1º12,12'2,2'0,1 $+ $$1 $+ , if you were words on a page, you'd be what they call FINE PRINT! 2,2'12,12'11,1º12,12'2,2'0 | .agentepensar I feel love in here!
-....Beautiful Water:/me looks to $$1 and says ... if water would be beautiful, you would be the ocean | .agentepensar I feel love in here!
+....Heaven:/me checks2 $$1 $+ 's 4shirt tag1.. 2Hmm1.. 4Just as I thought1.. 4,2 ©0,2 Made in Heaven 4©1. 
+....Mirror:/me says... $$1 if you held 11 roses in front of a mirror, you'd see the 12 most beautiful things in the world! :) 
+....Hrtcrzy:say 13,1 $$1 you make my heart go ...... crazy !| 9,1/\________/\____/\___/\__/\_/\_/\_/\_/\...4©  
+....Hrtsing:say 4,1 W 811I 68 £ 9D  13,1 T 8H 14Ä 11N 0G  8,1 {{4 $$1 8}}  0,1 ¥9o8ü  3,1 M0Ä8k13E  10,1 M11¥  11,1 H39E4Ä7R8T  9,1 S8ì13N14G9,1! 
+....Middlename:say 4,1 æè8,1øö0,1 ÐåÑgëR 4,1æè8,1øö15,1 is my middle name 0,1 $$1 $+ !!  4,1æè8,1øö  
+....Milk:say 2,2.0,0.2,2.0,0.2,2...0 $$1 2,2..8 My 4 NaMe 8 Is 0 MILK  8 I CaN Do YoUr 4BoDy 8GooD2,2...0,0.2,2.0,0.2,2. 
+....Sweetest:say 0,1 >0--<8,1 $$1  9 you 11 are 13 just 9 the 8S9w13ë11ë8T9ë13§11T 9 thang 8!! 0,1 >0--<13  
+....Cute:/me says 2(¯`·.,¸¸,7{14=12^4;12^14=7} 3{{5 $$1 3}} 7{14=12^4;12^14=7}2,¸¸,.·´¯) 10 You're So CUTE!!! 
+....PhoneNum:say 3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3'0,1  I seem to have lost my phone number $$1 $+ , can I borrow yours?  3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3' 
+....Thief:say 4,4.0,0'4,0©© 4,4.0,1 I'm a thief, and I'm here to steal your heart $$1 $+ ! 4,4.0,0'4,0©©0,0'4,4. 
+....Alien:say 3,1 x9,1(9-9×9-)3,1x 9Was you father an alien $$1 $+ ? 'Cuz there's nothing else like you on earth!3,1 x9,1(9-9×9-)3,1x  
+....FinePrint:say 2,2'12,12'11,1º12,12'2,2'0,1 $+ $$1 $+ , if you were words on a page, you'd be what they call FINE PRINT! 2,2'12,12'11,1º12,12'2,2'0 
+....Beautiful Water:/me looks to $$1 and says ... if water would be beautiful, you would be the ocean 
 ..Detalles para chicas
-...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bella y tierna! | .agentepensar Hmm siento el amor en el aire!
-...Agua Hermosa:/me mira a $$1 y le dice : Si el agua fuera hermosa, tu serias un oceano. | .agentepensar Me late que alguien está enamorado! | .agentepensar Hmm siento el amor en el aire!
+...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bella y tierna! 
+...Agua Hermosa:/me mira a $$1 y le dice : Si el agua fuera hermosa, tu serias un oceano.  
 ...Regalitos
 ....Rosa:/me regala una rosa 4@3}>-3'--,-- a $$1 | /sound $$1 kiss.wav Smuak!
 ....Rosa para tí:say 1Solo para tí 3,8 $$1 3,0 --}-}-(4@ | /sound $$1 kiss.wav Smuak!
@@ -519,11 +509,11 @@ Personales
 ....Beso suave:/me apaga las luces del canal, toma a2 $$1 ,por la cintura......... y a la luz de una vela.... la besa suavemente!!
 ....Beso apasionado:/me apaga las luces del canal, pasa sus brazos por el cuello de2 $$1 , y a la luz de una vela...... la besa apasionadamente
 ..Detalles para chicos
-...Trasero:/me queda completamente loca luego de ver el trasero de $$1 . Estas re bueno! | .agentepensar Hmm siento el amor en el aire!
-...Tierno:/me le da un besito en la mejilla a $$1 . Eres muy tierno corazón! | .agentepensar Hmm siento el amor en el aire!
-...Mirarme:/me le pide a $$1 que no deje de mirarla... " me encanta tu forma de mirar " | .agentepensar Hmm siento el amor en el aire!
-...Músculos:/me pasa sus manitos por los músculos de $$1 . Papito todo esto será mio? | .agentepensar Hmm siento el amor en el aire!
-...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bello y tierno! | .agentepensar Hmm siento el amor en el aire!
+...Trasero:/me queda completamente loca luego de ver el trasero de $$1 . Estas re bueno! 
+...Tierno:/me le da un besito en la mejilla a $$1 . Eres muy tierno corazón! 
+...Mirarme:/me le pide a $$1 que no deje de mirarla... " me encanta tu forma de mirar " 
+...Músculos:/me pasa sus manitos por los músculos de $$1 . Papito todo esto será mio? 
+...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bello y tierno! 
 ...Regalitos
 ....Rosa al tierno:/me regala una rosa 4@3}>-3'--,-- al tierno $$1 | /sound $$1 kiss.wav Smuak!
 ....Rosa para tí:say 1Solo para tí 3,8 $$1 3,0 --}-}-(4@ | /sound $$1 kiss.wav Smuak!
@@ -536,16 +526,16 @@ Personales
 ....Beso apasionado:/me apaga las luces del canal, pasa sus brazos por el cuello de2 $$1 , y a la luz de una vela...... lo besa apasionadamente
 ....Beso Loco:/me se acerca a $$1 y mientras admira su musculatura se muere por un beso loco .... me das un beso loco?
 .Medidor a $snick(#,1)
-..Nivel 1:say 14,14 0,15 0,14 7,1  8,1717,17234567890  0,14 0,15 0,14  $$1 esta en el nivel 1 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 2:say 14,14 0,15 0,14 7,1  18,1727,1734567890  0,14 0,15 0,14  $$1 esta en el nivel 2 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 3:say 14,14 0,15 0,14 7,1  128,1737,174567890  0,14 0,15 0,14  $$1 esta en el nivel 3 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 4:say 14,14 0,15 0,14 7,1  1238,1747,17567890  0,14 0,15 0,14  $$1 esta en el nivel 4 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 5:say 14,14 0,15 0,14 7,1  12348,1757,1767890  0,14 0,15 0,14  $$1 esta en el nivel 5 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 6:say 14,14 0,15 0,14 7,1  123458,1767,177890  0,14 0,15 0,14  $$1 esta en el nivel 6 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 7:say 14,14 0,15 0,14 7,1  1234568,1777,17890  0,14 0,15 0,14  $$1 esta en el nivel 7 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 8:say 14,14 0,15 0,14 7,1  12345678,1787,1790  0,14 0,15 0,14  $$1 esta en el nivel 8 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 9:say 14,14 0,15 0,14 7,1  123456788,1797,170  0,14 0,15 0,14  $$1 esta en el nivel 9 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 10:say 14,14 0,15 0,14 7,1  1234567898,17107,17  0,14 0,15 0,14  $$1 esta en el nivel 10 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
+..Nivel 1:say 14,14 0,15 0,14 7,1  8,1717,17234567890  0,14 0,15 0,14  $$1 esta en el nivel 1 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 2:say 14,14 0,15 0,14 7,1  18,1727,1734567890  0,14 0,15 0,14  $$1 esta en el nivel 2 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 3:say 14,14 0,15 0,14 7,1  128,1737,174567890  0,14 0,15 0,14  $$1 esta en el nivel 3 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 4:say 14,14 0,15 0,14 7,1  1238,1747,17567890  0,14 0,15 0,14  $$1 esta en el nivel 4 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 5:say 14,14 0,15 0,14 7,1  12348,1757,1767890  0,14 0,15 0,14  $$1 esta en el nivel 5 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 6:say 14,14 0,15 0,14 7,1  123458,1767,177890  0,14 0,15 0,14  $$1 esta en el nivel 6 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 7:say 14,14 0,15 0,14 7,1  1234568,1777,17890  0,14 0,15 0,14  $$1 esta en el nivel 7 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 8:say 14,14 0,15 0,14 7,1  12345678,1787,1790  0,14 0,15 0,14  $$1 esta en el nivel 8 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 9:say 14,14 0,15 0,14 7,1  123456788,1797,170  0,14 0,15 0,14  $$1 esta en el nivel 9 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 10:say 14,14 0,15 0,14 7,1  1234567898,17107,17  0,14 0,15 0,14  $$1 esta en el nivel 10 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
 .Colchoneta:.say $$1 aca te presto una colchoneta para que te recuperes de la caida! :)
 .Exclamacion:say $$1 $+ , $input(Ingresa el texto,1) !¡!¡!¡!¡!¡!¡!¡!¡!¡!¡!¡ 
 .Tinta:say Oo14ooh 15n14o creo qu15e mi 14te15cl14ad15o se es14t15a quedando si14n 15tinta!!!
@@ -563,16 +553,6 @@ Ping:/ping $$1
 Páginas
 .DALnet:say La página oficial de DALnet es:2 http://www.dal.net/ .
 .CaeScript:say La página oficial del CaeScript es:2 http://www.caespock.org/ircsoftware/ .
-Agente Microsoft
-.Cargar:/acargar
-.Descargar:/adescargar
-.Mostrar:/amostrar
-.Ocultar:/aocultar
-.Hablar:/ahablar
-.Pensar:/apensar
-.Mover:/amover
-.Apuntar:/aapuntar
-.Acción:/aaccion
 -
 Usuario
 .Silencio
@@ -626,12 +606,12 @@ Formato de Texto
 .Formato 17:/texto17
 .Formato 18:/texto18
 Personales
-.ASCII:play $$1 " $+ $sfile(%filtroascii,Escoge un ASCII,Mostrar) $+ " | .agentepensar Un poco de arte ASCII
+.ASCII:play $$1 " $+ $sfile(%filtroascii,Escoge un ASCII,Mostrar) $+ "
 .Sonido:/sound $$1 " $+ $sfile($sound(wav),Escoge un Sonido,Tocar) $+ " $input(Mensaje para el sonido,eq,CaeScript)
-.Chiste:/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Chiste: $+ %color.titulo1 $+ ] $read( %filtrochistes ) | .agentepensar Hahaha buen chiste!
-.Frase Célebre:/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Frase Célebre: $+ %color.titulo1 $+ ] $read( %filtrofrases ) | .agentepensar Excelente frase!
-.Piropo:/msg $$1 $read( %filtropiropos ) | .agentepensar Que lindo ... 
-.Poema:play $$1 " $+ $sfile(%filtropoemas,Escoge un Poema,Mostrar) $+ " | .agentepensar Estos poemas nos inspiran la vida!
+.Chiste:/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Chiste: $+ %color.titulo1 $+ ] $read( %filtrochistes )
+.Frase Célebre:/msg $$1  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Frase Célebre: $+ %color.titulo1 $+ ] $read( %filtrofrases )
+.Piropo:/msg $$1 $read( %filtropiropos )
+.Poema:play $$1 " $+ $sfile(%filtropoemas,Escoge un Poema,Mostrar) $+ "
 .Holas
 ..Cinta:say 1,1 1,2 1,3 1,4 1,5 1,6 1,7 1,8 1,9 1,10 1,11 1,12 1,13 1,14 1,15 1,17 1,18 8,1 Hola $$1 1,1 1,2 1,3 1,4 1,5 1,6 1,7 1,8 1,9 1,10 1,11 1,12 1,13 1,14 1,15 1,17 1,18 1,19
 ..Colores:say Hola 12(4(12( 7§8§7§ 2¤4¤12¤13 $$1 12¤4¤2¤ 7§8§7§ 12)4)12)
@@ -750,16 +730,16 @@ Personales
 ...Crab:/me sneaks up behind4 $$1 12and slips a crab down his pants 4,1«0°°4»8
 ...TNT:say 1,4 D Y N A M I T E 5,0]5-------4.`,'.12 Here 4 $$1 12 !!! 12, CATCH !!!
 .Detalles - Amor
-..Hola:/me se apresura y dice 2Hola $$1 4@3)-{-{-- | /sound $$1 kiss.wav Smuak! | .agentepensar Hmm siento el amor en el aire!
-..Me gustas mucho:/me te pregunta $$1 ... "Alguna vez te dije que me gustas mucho?" | .agentepensar Hmm siento el amor en el aire!
-..Mi corazón al verte:/me te pregunta $$1 .. "Sabes que cada vez que te veo mi corazon late mas rápido pero al ritmo del amor?" | .agentepensar Hmm siento el amor en el aire!
-..Caiste del cielo:/me te pregunta si te dolio? $$1 te dolio cuando caiste de las estrellas? | .agentepensar Hmm siento el amor en el aire!
-..Bombón al sol:/me te pide $$1 que cuando haga sol camines por la sombra... los bombones como tú se derriten al sol :) | .agentepensar Hmm siento el amor en el aire!
-..Belleza Pecado:/me dice $$1 si la belleza fuera pecado, tu tendrías el infierno asegurado :) | .agentepensar Hmm siento el amor en el aire!
-..Espejo:/me dice $$1 si agarraras 11 rosas en frente a un espejo, verías las 12 cosas más bellas del mundo! :) | .agentepensar Hmm siento el amor en el aire!
-..Flores:say 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- | .agentepensar Hmm siento el amor en el aire!
-..Amor:/me 4©5A4©5M4©5O4©5R4©2 $$1 44©5L4©5O4©5V4©5E4© | .agentepensar Hmm siento el amor en el aire!
-..Corre:/me corre rápidamente hacia $$1 para decirle delante de todo el mundo ... Te amo y siempre estarás en mi corazon! :* | .agentepensar Hmm siento el amor en el aire!
+..Hola:/me se apresura y dice 2Hola $$1 4@3)-{-{-- | /sound $$1 kiss.wav Smuak! 
+..Me gustas mucho:/me te pregunta $$1 ... "Alguna vez te dije que me gustas mucho?" 
+..Mi corazón al verte:/me te pregunta $$1 .. "Sabes que cada vez que te veo mi corazon late mas rápido pero al ritmo del amor?" 
+..Caiste del cielo:/me te pregunta si te dolio? $$1 te dolio cuando caiste de las estrellas? 
+..Bombón al sol:/me te pide $$1 que cuando haga sol camines por la sombra... los bombones como tú se derriten al sol :) 
+..Belleza Pecado:/me dice $$1 si la belleza fuera pecado, tu tendrías el infierno asegurado :) 
+..Espejo:/me dice $$1 si agarraras 11 rosas en frente a un espejo, verías las 12 cosas más bellas del mundo! :) 
+..Flores:say 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- $$1 4@5>3-->-`->--,--- 
+..Amor:/me 4©5A4©5M4©5O4©5R4©2 $$1 44©5L4©5O4©5V4©5E4© 
+..Corre:/me corre rápidamente hacia $$1 para decirle delante de todo el mundo ... Te amo y siempre estarás en mi corazon! :* 
 ..Musica:/musica $$1
 ..Corazones
 ...Corazones grandes:say 4(¯`·. (¯`·.   $$1 (¯`·. (¯`·. | say 4(_.·´ (_.·´   $$1 (_.·´ (_.·´
@@ -772,29 +752,29 @@ Personales
 ...Beso Pequeño:say 13,13.8,8.9,9.0,18 $me 0sopla0 un pequeño y dulce beso a0,1 (¯`·.¸¸.->4©8 $$1 4© 9,9.8,8.13,13.
 ..English
 ...Kisses
-....Kisses4:say 1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1'0,4 Kisses for you $$1  1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1' | .agentepensar I feel love in here!
-....KOTC:say 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8,2 Kiss on the cheek for you $$1 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8 | .agentepensar I feel love in here!
-....BlowKisses:/me 12blows some 4kisses your way 12»»--4(¯`°´¯)12=4(¯`°´¯)12---»»4 4 $$1  | .agentepensar I feel love in here!
-....kissnhug...:/me can't resist 4©1kissin'4©1 and 12{{1huggin'12}} 12{{4©4©1 $$1 4©4©12}} | .agentepensar I feel love in here!
-....kiss....:/me 2R3u4N13s6s12s13 14O2v3e4R5 6a12N13D14 2G3i4V5e6S  12{{4©4©1 $$1 4©4©12}} 1a 0,14*0B8*0I9*0G11*0 13*0K4*0I8*0S9*0S11*013*0 | .agentepensar I feel love in here!
-....kisskiss:say 4,1©8K4©8I4©8S4©8S4©9 $$1 4©8K4©8I4©8S4©8S4© | .agentepensar I feel love in here!
+....Kisses4:say 1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1'0,4 Kisses for you $$1  1,1'4,4'0,0'4,4'1,11,1'4,0 KiSSeS 1,1'4,4'0,0'4,4'1,1' 
+....KOTC:say 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8,2 Kiss on the cheek for you $$1 2,2.8,8'2,2.2,8 *KOTC* 2,2.8,8'2,2.8 
+....BlowKisses:/me 12blows some 4kisses your way 12»»--4(¯`°´¯)12=4(¯`°´¯)12---»»4 4 $$1  
+....kissnhug...:/me can't resist 4©1kissin'4©1 and 12{{1huggin'12}} 12{{4©4©1 $$1 4©4©12}} 
+....kiss....:/me 2R3u4N13s6s12s13 14O2v3e4R5 6a12N13D14 2G3i4V5e6S  12{{4©4©1 $$1 4©4©12}} 1a 0,14*0B8*0I9*0G11*0 13*0K4*0I8*0S9*0S11*013*0 
+....kisskiss:say 4,1©8K4©8I4©8S4©8S4©9 $$1 4©8K4©8I4©8S4©8S4© 
 ...NiceWords
-....Heaven:/me checks2 $$1 $+ 's 4shirt tag1.. 2Hmm1.. 4Just as I thought1.. 4,2 ©0,2 Made in Heaven 4©1. | .agentepensar I feel love in here!
-....Mirror:/me says... $$1 if you held 11 roses in front of a mirror, you'd see the 12 most beautiful things in the world! :) | .agentepensar I feel love in here!
-....Hrtcrzy:say 13,1 $$1 you make my heart go ...... crazy !| 9,1/\________/\____/\___/\__/\_/\_/\_/\_/\...4©  | .agentepensar I feel love in here!
-....Hrtsing:say 4,1 W 811I 68 £ 9D  13,1 T 8H 14Ä 11N 0G  8,1 {{4 $$1 8}}  0,1 ¥9o8ü  3,1 M0Ä8k13E  10,1 M11¥  11,1 H39E4Ä7R8T  9,1 S8ì13N14G9,1! | .agentepensar I feel love in here!
-....Middlename:say 4,1 æè8,1øö0,1 ÐåÑgëR 4,1æè8,1øö15,1 is my middle name 0,1 $$1 $+ !!  4,1æè8,1øö  | .agentepensar I feel love in here!
-....Milk:say 2,2.0,0.2,2.0,0.2,2...0 $$1 2,2..8 My 4 NaMe 8 Is 0 MILK  8 I CaN Do YoUr 4BoDy 8GooD2,2...0,0.2,2.0,0.2,2. | .agentepensar I feel love in here!
-....Sweetest:say 0,1 >0--<8,1 $$1  9 you 11 are 13 just 9 the 8S9w13ë11ë8T9ë13§11T 9 thang 8!! 0,1 >0--<13  | .agentepensar I feel love in here!
-....Cute:/me says 2(¯`·.,¸¸,7{14=12^4;12^14=7} 3{{5 $$1 3}} 7{14=12^4;12^14=7}2,¸¸,.·´¯) 10 You're So CUTE!!! | .agentepensar I feel love in here!
-....PhoneNum:say 3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3'0,1  I seem to have lost my phone number $$1 $+ , can I borrow yours?  3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3' | .agentepensar I feel love in here!
-....Thief:say 4,4.0,0'4,0©© 4,4.0,1 I'm a thief, and I'm here to steal your heart $$1 $+ ! 4,4.0,0'4,0©©0,0'4,4. | .agentepensar I feel love in here!
-....Alien:say 3,1 x9,1(9-9×9-)3,1x 9Was you father an alien $$1 $+ ? 'Cuz there's nothing else like you on earth!3,1 x9,1(9-9×9-)3,1x  | .agentepensar I feel love in here!
-....FinePrint:say 2,2'12,12'11,1º12,12'2,2'0,1 $+ $$1 $+ , if you were words on a page, you'd be what they call FINE PRINT! 2,2'12,12'11,1º12,12'2,2'0 | .agentepensar I feel love in here!
-....Beautiful Water:/me looks to $$1 and says ... if water would be beautiful, you would be the ocean | .agentepensar I feel love in here!
+....Heaven:/me checks2 $$1 $+ 's 4shirt tag1.. 2Hmm1.. 4Just as I thought1.. 4,2 ©0,2 Made in Heaven 4©1. 
+....Mirror:/me says... $$1 if you held 11 roses in front of a mirror, you'd see the 12 most beautiful things in the world! :) 
+....Hrtcrzy:say 13,1 $$1 you make my heart go ...... crazy !| 9,1/\________/\____/\___/\__/\_/\_/\_/\_/\...4©  
+....Hrtsing:say 4,1 W 811I 68 £ 9D  13,1 T 8H 14Ä 11N 0G  8,1 {{4 $$1 8}}  0,1 ¥9o8ü  3,1 M0Ä8k13E  10,1 M11¥  11,1 H39E4Ä7R8T  9,1 S8ì13N14G9,1! 
+....Middlename:say 4,1 æè8,1øö0,1 ÐåÑgëR 4,1æè8,1øö15,1 is my middle name 0,1 $$1 $+ !!  4,1æè8,1øö  
+....Milk:say 2,2.0,0.2,2.0,0.2,2...0 $$1 2,2..8 My 4 NaMe 8 Is 0 MILK  8 I CaN Do YoUr 4BoDy 8GooD2,2...0,0.2,2.0,0.2,2. 
+....Sweetest:say 0,1 >0--<8,1 $$1  9 you 11 are 13 just 9 the 8S9w13ë11ë8T9ë13§11T 9 thang 8!! 0,1 >0--<13  
+....Cute:/me says 2(¯`·.,¸¸,7{14=12^4;12^14=7} 3{{5 $$1 3}} 7{14=12^4;12^14=7}2,¸¸,.·´¯) 10 You're So CUTE!!! 
+....PhoneNum:say 3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3'0,1  I seem to have lost my phone number $$1 $+ , can I borrow yours?  3,3'8,8'3,3'9,1 *WiNk* 3,3'8,8'3,3' 
+....Thief:say 4,4.0,0'4,0©© 4,4.0,1 I'm a thief, and I'm here to steal your heart $$1 $+ ! 4,4.0,0'4,0©©0,0'4,4. 
+....Alien:say 3,1 x9,1(9-9×9-)3,1x 9Was you father an alien $$1 $+ ? 'Cuz there's nothing else like you on earth!3,1 x9,1(9-9×9-)3,1x  
+....FinePrint:say 2,2'12,12'11,1º12,12'2,2'0,1 $+ $$1 $+ , if you were words on a page, you'd be what they call FINE PRINT! 2,2'12,12'11,1º12,12'2,2'0 
+....Beautiful Water:/me looks to $$1 and says ... if water would be beautiful, you would be the ocean 
 ..Detalles para chicas
-...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bella y tierna! | .agentepensar Hmm siento el amor en el aire!
-...Agua Hermosa:/me mira a $$1 y le dice : Si el agua fuera hermosa, tu serias un oceano. | .agentepensar Hmm siento el amor en el aire!
+...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bella y tierna! 
+...Agua Hermosa:/me mira a $$1 y le dice : Si el agua fuera hermosa, tu serias un oceano. 
 ...Regalitos
 ....Rosa:/me regala una rosa 4@3}>-3'--,-- a $$1 | /sound $$1 kiss.wav Smuak!
 ....Rosa para tí:say 1Solo para tí 3,8 $$1 3,0 --}-}-(4@ | /sound $$1 kiss.wav Smuak!
@@ -809,11 +789,11 @@ Personales
 ....Beso suave:/me apaga las luces del canal, toma a2 $$1 ,por la cintura......... y a la luz de una vela.... la besa suavemente!!
 ....Beso apasionado:/me apaga las luces del canal, pasa sus brazos por el cuello de2 $$1 , y a la luz de una vela...... la besa apasionadamente
 ..Detalles para chicos
-...Trasero:/me queda completamente loca luego de ver el trasero de $$1 . Estas re bueno! | .agentepensar Hmm siento el amor en el aire!
-...Tierno:/me le da un besito en la mejilla a $$1 . Eres muy tierno corazón! | .agentepensar Hmm siento el amor en el aire!
-...Mirarme:/me le pide a $$1 que no deje de mirarla... " me encanta tu forma de mirar " | .agentepensar Hmm siento el amor en el aire!
-...Músculos:/me pasa sus manitos por los músculos de $$1 . Papito todo esto será mio? | .agentepensar Hmm siento el amor en el aire!
-...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bello y tierno! | .agentepensar Hmm siento el amor en el aire!
+...Trasero:/me queda completamente loca luego de ver el trasero de $$1 . Estas re bueno! 
+...Tierno:/me le da un besito en la mejilla a $$1 . Eres muy tierno corazón! 
+...Mirarme:/me le pide a $$1 que no deje de mirarla... " me encanta tu forma de mirar " 
+...Músculos:/me pasa sus manitos por los músculos de $$1 . Papito todo esto será mio? 
+...Telefono:/me pide el teléfono de tu casa $$1 , tengo que llamar a tu casa y agradecerle a tu mamá por haberte hecho tan dulce, bello y tierno! 
 ...Regalitos
 ....Rosa al tierno:/me regala una rosa 4@3}>-3'--,-- al tierno $$1 | /sound $$1 kiss.wav Smuak!
 ....Rosa para tí:say 1Solo para tí 3,8 $$1 3,0 --}-}-(4@ | /sound $$1 kiss.wav Smuak!
@@ -826,16 +806,16 @@ Personales
 ....Beso apasionado:/me apaga las luces del canal, pasa sus brazos por el cuello de2 $$1 , y a la luz de una vela...... lo besa apasionadamente
 ....Beso Loco:/me se acerca a $$1 y mientras admira su musculatura se muere por un beso loco .... me das un beso loco?
 .Medidor
-..Nivel 1:say 14,14 0,15 0,14 7,1  8,1717,17234567890  0,14 0,15 0,14  $$1 esta en el nivel 1 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 2:say 14,14 0,15 0,14 7,1  18,1727,1734567890  0,14 0,15 0,14  $$1 esta en el nivel 2 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 3:say 14,14 0,15 0,14 7,1  128,1737,174567890  0,14 0,15 0,14  $$1 esta en el nivel 3 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 4:say 14,14 0,15 0,14 7,1  1238,1747,17567890  0,14 0,15 0,14  $$1 esta en el nivel 4 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 5:say 14,14 0,15 0,14 7,1  12348,1757,1767890  0,14 0,15 0,14  $$1 esta en el nivel 5 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 6:say 14,14 0,15 0,14 7,1  123458,1767,177890  0,14 0,15 0,14  $$1 esta en el nivel 6 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 7:say 14,14 0,15 0,14 7,1  1234568,1777,17890  0,14 0,15 0,14  $$1 esta en el nivel 7 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 8:say 14,14 0,15 0,14 7,1  12345678,1787,1790  0,14 0,15 0,14  $$1 esta en el nivel 8 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 9:say 14,14 0,15 0,14 7,1  123456788,1797,170  0,14 0,15 0,14  $$1 esta en el nivel 9 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
-..Nivel 10:say 14,14 0,15 0,14 7,1  1234567898,17107,17  0,14 0,15 0,14  $$1 esta en el nivel 10 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript) | .agentepensar Hora de sacar mi cinta para medir.
+..Nivel 1:say 14,14 0,15 0,14 7,1  8,1717,17234567890  0,14 0,15 0,14  $$1 esta en el nivel 1 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 2:say 14,14 0,15 0,14 7,1  18,1727,1734567890  0,14 0,15 0,14  $$1 esta en el nivel 2 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 3:say 14,14 0,15 0,14 7,1  128,1737,174567890  0,14 0,15 0,14  $$1 esta en el nivel 3 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 4:say 14,14 0,15 0,14 7,1  1238,1747,17567890  0,14 0,15 0,14  $$1 esta en el nivel 4 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 5:say 14,14 0,15 0,14 7,1  12348,1757,1767890  0,14 0,15 0,14  $$1 esta en el nivel 5 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 6:say 14,14 0,15 0,14 7,1  123458,1767,177890  0,14 0,15 0,14  $$1 esta en el nivel 6 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 7:say 14,14 0,15 0,14 7,1  1234568,1777,17890  0,14 0,15 0,14  $$1 esta en el nivel 7 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 8:say 14,14 0,15 0,14 7,1  12345678,1787,1790  0,14 0,15 0,14  $$1 esta en el nivel 8 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 9:say 14,14 0,15 0,14 7,1  123456788,1797,170  0,14 0,15 0,14  $$1 esta en el nivel 9 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
+..Nivel 10:say 14,14 0,15 0,14 7,1  1234567898,17107,17  0,14 0,15 0,14  $$1 esta en el nivel 10 del Medidor de $input(Ingrese el tipo de medidor. Ej: Belleza,eq,CaeScript)
 .Colchoneta:.colchoneta $$1
 .Exclamacion:say $$1 $+ , $input(Ingresa el texto,eq,CaeScript) !¡!¡!¡!¡!¡!¡!¡!¡!¡!¡!¡ 
 .Tinta:say Oo14ooh 15n14o creo qu15e mi 14te15cl14ad15o se es14t15a quedando si14n 15tinta!!!
@@ -850,16 +830,8 @@ menu status {
 CaeScript %version.caescript:if %usarsonido == 1 { .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos version }
 -
 Activar Pantalla de datos:/ventanadatos
-Sonidos
-.$iif(%usarsonido == 1,$style(2)) Activar:/enablesound
-.$iif(%usarsonido == 0,$style(2)) Desactivar:/disablesound
-Colores en Mensajes de Ops
-.$iif(%opscolor == 1,$style(2)) Activar:/enableopscolours
-.$iif(%opscolor == 0,$style(2)) Desactivar:/disableopscolours
-Colores en Mensajes de VoicedOps
-.$iif(%opsvcolor == 1,$style(2)) Activar:/enablevopscolours
-.$iif(%opsvcolor == 0,$style(2)) Desactivar:/disablevopscolours
--
+Informacion del Sistema:/informacion
+--
 Modulos
 .$iif(%addondalnet == 1,$style(2)) Cargar Add-On DALnet:.load -rs caescript\addons\dalnet.mrc
 .$iif(%addoneggdrop == 1,$style(2)) Cargar Add-On EggDrop:.load -rs caescript\addons\eggdrop.mrc

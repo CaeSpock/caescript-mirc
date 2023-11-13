@@ -9,7 +9,6 @@ alias achan {
   else { echo -a  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Uso: $+ %color.titulo1 $+ ] /ACHAN <mensaje> }
 }
 alias ascii {
-  .agentepensar Un poco de ASCII no le viene mal a nadie!
   /play $sfile( %filtroascii , Escoge un ASCII, Despliegalo)
 }
 alias afectadosban {
@@ -32,7 +31,6 @@ alias afuera2 {
       /amsg Estoy Away - Paginador Encendido, para Paginarme:12 /ctcp $me Page <mensaje> 
     }
   }
-  .agentehablar Estas marcado como AWAY o ausente!
   .echo -s  $+ %color.titulo2 $+ [N] Has sido marcado como ausente (away).
   ; if %lagmeter == 1 {
   ;   .unload -rs caescript/addons/lag.mrc
@@ -41,188 +39,6 @@ alias afuera2 {
 }
 alias adecir ahablar $1-
 alias amostrar aver $1- 
-alias aver {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( $agentver > 0 ) { 
-      .set %visible.agente 1
-      .gshow caeagente
-    }
-  }
-}
-alias aocultar {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( $agentver > 0 ) { 
-      .ghide caeagente
-      .set %ver.siempre.ms.agente 0
-      .set %visible.agente 0
-    }
-  }
-}
-alias amover {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( $agentver > 0 ) { 
-      .gshow caeagente
-      if ($2) { 
-        .gmove caeagente $1-
-      }
-      else {
-        .gmove caeagente $input(Coordenadas X Y,ei,CaeScript)
-      }
-    }
-  }
-}
-alias aaccion {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( $agentver > 0 ) { 
-      .gshow caeagente
-      if ($1) { 
-        .gplay caeagente $1-
-      }
-      else {
-        .gplay caeagente $input(Acción o Número,ei,CaeScript)
-      }
-    }
-  }
-}
-alias apensar {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( $agentver > 0 ) { 
-      set %visible.agente 0
-      if ($agent(caeagente).visible == $true) { set %visible.agente 1 }
-      if ($1) { 
-        .gshow caeagente
-        .gtalk -k caeagente $1-
-      }
-      else {
-        .gshow caeagente
-        .gtalk -k caeagente $input(Mensaje en el Agente,ei,CaeScript)
-      }
-      if ($agentstat == 1) {
-        if %visible.agente == 0 .ghide caeagente
-      }
-    }
-  }
-}
-
-alias ahablar {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( $agentver > 0 ) { 
-      set %visible.agente 0
-      if ($agent(caeagente).visible == $true) { set %visible.agente 1 }
-      if ($1) { 
-        .gshow caeagente
-        .gtalk caeagente $1-
-      }
-      else {
-        .gshow caeagente
-        .gtalk caeagente $input(Mensaje en el Agente,ei,CaeScript)
-      }
-      if ($agentstat == 1) {
-        if %visible.agente == 0 .ghide caeagente
-      }
-    }
-  }
-}
-alias agentepensar {
-  if ( %visible.agente == 1 ) {
-
-    if ($agent(caeagente).visible == $true) { 
-
-      if ($1) { .gtalk -k caeagente $1- }
-      else { .gtalk -k caeagente $1- $input(Mensaje a pensar,ei,CaeScript) }
-
-    }
-
-  }
-}
-alias agentehablar {
-  if ( %visible.agente == 1 ) {
-    set %visible.agente 0
-    if ($agent(caeagente).visible == $true) { set %visible.agente 1 }
-    if ( $agentver > 0 ) { 
-      if ($1) { 
-        .gshow caeagente
-        .gtalk caeagente $1-
-      }
-      else {
-
-        .gshow caeagente
-        .gtalk caeagente $1- $input(Mensaje a hablar,ei,CaeScript)
-      }
-      if ($agentstat == 1) {
-        if %visible.agente == 0 .ghide caeagente
-      }
-    }
-  }
-}
-alias aapuntar {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    if ( %ver.ms.agente == 1 ) {
-      set %visible.agente 0
-      if ($agent(caeagente).visible == $true) { set %visible.agente 1 }
-      if ( $agentver > 0 ) { 
-        if ($2) { 
-          .gshow caeagente
-          .gpoint caeagente $1-
-        }
-        else {
-          .gshow caeagente
-          .gpoint caeagente $1- $input(Coordenadas X Y,ei,CaeScript)
-        }
-        if ($agentstat == 1) {
-          if %visible.agente == 0 .ghide caeagente
-        }
-      }
-    }
-  }
-}
-alias acargar {
-  if ( %agentecargado == 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente ya fue cargado.
-  }
-  else {
-    if ($1) {
-      .gload caeagente $1-
-      .set %agentecargado 1
-    }
-    else {
-      .echo -a  $+ %color.titulo2 $+ [N] Cargando agente.
-      .gload caeagente default
-      .set %agentecargado 1
-    }
-  }
-}
-alias adescargar {
-  if ( %agentecargado != 1) {
-    .echo -a  $+ %color.titulo2 $+ [N] El agente no fue cargado.
-  }
-  else {
-    .echo -a  $+ %color.titulo2 $+ [N] Descargando agente.
-    .gunload caeagente
-    .set %agentecargado 0
-  }
-}
 alias autoexec { echo -a  $+ %color.titulo2 $+ [N] Editando archivo de comandos autoejecutables | .run notepad.exe caescript\autoexec.txt }
 alias addons { echo -a  $+ %color.titulo2 $+ [N] Editando archivo de carga/descarga de addons | .run notepad.exe caescript\addons\addons.txt }
 alias awayp afuera $1-
@@ -237,7 +53,6 @@ alias vuelta {
       /amsg Estoy de vuelta! 
     }
   }
-  .agentehablar Ya no estas marcado como AWAY o ausente!
   .echo -s  $+ %color.titulo2 $+ [N] Ya no estás marcado como ausente (away).
   ; ### Iniciando LagMeter
   ; if %lagmeter == 1 {
@@ -254,7 +69,6 @@ alias vuelta {
   .haltdef
 }
 alias adios { 
-  .agentepensar Epa! ya nos estamos despidiendo?
   /say 1,1x11,1<8*11>1,1x11,1<8*11>0,1 Chau a todos!!1x11,1<8*11>1,1x11,1<8*11> 
 }
 alias apreton {
@@ -262,7 +76,6 @@ alias apreton {
   else { /me le da un apretón a {{{{{{ $input(Ingresa el nick o el #canal,ei,CaeScript) }}}}}} por ser tan especial! }
 }
 alias ayuda {
-  .agentepensar Si si, mejor lee el manual....
   /run $mircdir $+ caescript\caescript.chm
 }
 alias b /ban # $1- %tipoban
@@ -271,7 +84,6 @@ alias bant /ban -u $+ $calc($1 *60) # $2 %tipoban
 alias beer {
   if ($1) { /me invites a fine cold Bolivian beer to $1- }
   else { /me invites a fine cold Bolivian beer to $input(Ingresa el nick o el #canal,ei,CaeScript) }
-  .agentehablar $nick Hic!! Cheers Hic!!
 }
 alias beso {
   if ($1) { /me le da a $1- un rico, delicioso, explosivo, caliente, humedo, acaramelado, rompe corazones, fantastico e inolvidable...beso en la boca :) }
@@ -292,12 +104,8 @@ alias bm /ban # $1- %tipoban | .kick # $1- Mayusculas NO permitidas en este cana
 alias bmt /ban -u $+ %tiempobantemporal # $1- %tipoban | .kick # $1- Ban Temporal de $calc( %tiempobantemporal /60) Minutos - Mayusculas NO permitidas en el canal | .raw notice $1- :Has sido baneado(a) de # por el uso excesivo de mayusculas. Las mayúsculas significan gritar. En este canal NO se se permite gente gritando
 alias bn /ban # $1- %tipoban | .kick # $1- Nick Ofensivo NO permitido en este canal | .raw notice $1- :Has sido baneado(a) de # por usar un nick ofensivo. Cambia de nick y podrás ingresar al canal
 alias bnt /ban -u $+ %tiempobantemporal # $1- %tipoban | .kick # $1- Ban Temporal de $calc( %tiempobantemporal /60) Minutos - Nick Ofensivo NO permitido en este canal | .raw notice $1- :Has sido baneado(a) de # por usar un nick ofensivo. Cambia de nick y podrás ingresar al canal
-alias bol { say Bienvenidos al canal 12,1 #4,1BO8,1LI9,1VIA . Estan en su casa.
-  .agentehablar Viva Bolivia!
-}
-alias bolivia { say 4,4 $1-   | say 1,8 $1-15,15  | say 3,3 $1-  15,15  | say 0,0 15,15 $1-  15,15 
-  .agentehablar Viva Bolivia!
-}
+alias bol { say Bienvenidos al canal 12,1 #4,1BO8,1LI9,1VIA . Estan en su casa. }
+alias bolivia { say 4,4 $1-   | say 1,8 $1-15,15  | say 3,3 $1-  15,15  | say 0,0 15,15 $1-  15,15 }
 alias bp /ban # $1- %tipoban | /kick # $1- Publicidad de páginas no permitida en el canal | .raw notice $1- :Has sido baneado(a) de # por enviar publicidad de páginas web automáticamente. Si usas mIRC teclea /remote off o si usas pIRCh teclea /set events off para desactivar esto
 alias bpt /ban -u $+ %tiempobantemporal # $1- %tipoban | /kick # $1- Ban Temporal de $calc( %tiempobantemporal /60) Minutos - Publicidad de páginas no permitida en el canal | .raw notice $1- :Has sido baneado(a) de # por enviar publicidad de páginas web automáticamente. Si usas mIRC teclea /remote off o si usas pIRCh teclea /set events off para desactivar esto
 alias br /ban # $1- %tipoban | /kick # $1- No repitas, todos leemos a la primera. | .raw notice $1- :Has sido baneado(a) de # debido a que repetiste. Recuerda que todos leen a la primera. No repitas.
@@ -314,7 +122,6 @@ alias bx2 /ban # $1- %tipoban | .kick # $1- Disculpa a nosotros no nos interesa 
 alias bx2t /ban -u $+ %tiempobantemporal # $1- %tipoban | .kick # $1- Ban Temporal de $calc( %tiempobantemporal /60) Minutos - Disculpa a nosotros no nos interesa tu preferencia sexual, nos interesa que respetes las reglas de este canal. Aca NO SEXO. | .raw notice $1- :Has sido baneado(a) de # por hacer comentarios de tipo sexual. En este canal las charlas de sexo de cualquier tipo no son permitidas.
 
 alias c {
-  .agentepensar Contando, contando, si tuviera una calculadora!
   if (%usarsonido == 1) {
     .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos beeper | /say 12Estadísticas de # $+ : 5Ops: 14 $+ $opnick($chan,0) 5Voices: 14 $+ $vnick($chan,0) 5Non-Op/Voice: 14 $+ $calc($nick($chan,0) - ($opnick($chan,0) + $vnick($chan,0))) 5Total: 14 $+ $nick($chan,0) 
   }
@@ -324,7 +131,6 @@ alias colchoneta {
   else { /me ofrece una colchoneta a $input(Nick,eq,CaeScript) para su caida. }
 }
 alias count {
-  .agentepensar Contando, contando, si tuviera una calculadora!
   if (%usarsonido == 1) {
     .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos beeper | /echo -a 12Estadísticas de # $+ : | /echo -a 5Ops: 14 $+ $opnick($chan,0) 5Voices: 14 $+ $vnick($chan,0) 5Non-Op/Voice: 14 $+ $calc($nick($chan,0) - ($opnick($chan,0) + $vnick($chan,0))) 5Total: 14 $+ $nick($chan,0) 
   }
@@ -358,7 +164,6 @@ alias canalescomunes {
 alias cerveza {
   if ($1) { /me invita una fina cerveza Boliviana a $1- }
   else { /me invita una fina cerveza Boliviana a $input(Por favor entra el nick o canal,ei,CaeScript) }
-  .agentehablar $nick Hic! Saluuud! Hic!
 }
 alias cinta say 1,1 1,2 1,3 1,4 1,5 1,6 1,7 1,8 1,9 1,10 1,11 1,12 1,13 1,14 1,15 1,17 1,18 8,1 $1- 1,1 1,2 1,3 1,4 1,5 1,6 1,7 1,8 1,9 1,10 1,11 1,12 1,13 1,14 1,15 1,17 1,18 1,19
 alias /csopme chanserv op # $me
@@ -372,14 +177,12 @@ alias ejecutar {
 
 alias hola say Hola 12(4(12( 7§8§7§ 2¤4¤12¤13 $1- 12¤4¤2¤ 7§8§7§ 12)4)12)
 alias holas {
-  .agentepensar Holas a todos!! Es hora de ponerse las pilas!
   /say 8,1<4,1-8,1>13,1 Hola a todos! 8,1<4,1-8,1>
 }
 alias holas2 {
   /say  1#2#3#4#5#6#7#8#9#10#11#12#13#14#15#16#5 Hola $snicks !!!! 16#15#14#13#12#11#10#9#8#7#6#5#4#3#2#1#
 }
 alias hora {
-  .agentepensar Cuckoo! Cuckoo!
   if (%usarsonido == 1) {
     .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos reloj | say Fecha: $+ %color.titulo2 $date Hora: $+ %color.titulo2 $time 
   }
@@ -442,7 +245,6 @@ alias m {
   else { echo -a  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Uso: $+ %color.titulo1 $+ ] /M <mensaje> }
 }
 alias math {
-  .agentepensar Este cálculo es manual, yo no uso calculadora!
   if (%usarsonido == 1) {
     .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos beeper | /echo -a 2Cálculo: $1- = $calc( $1- )
   }
@@ -467,28 +269,8 @@ alias mr {
   if ($1) { notice $1- por favor no repitas, todos leemos a la primera :) Gracias. }
   else { notice $input(Nick,eq,CaeScript) por favor no repitas, todos leemos a la primera :) Gracias. }
 }
-alias mp3off {
-  .agentepensar Eso!!! La música es el espíritu de la vida!
-  if ($1) {
-    .set %mp3 $1-
-  }
-  else {
-    if (%pathmp3) { %mp3 = $sfile(%pathmp3, Escoge un MP3!, Reproducir) }
-    else { %mp3 = $sfile($sound(mp3), Escoge un MP3!, Reproducir) }
-  }
-  if ( %mp3 ) {
-    if (%mp3sonido == 1) { .ctcp $active SOUND %mp3 }
-    if (%reproductormp3 == 1) { .run %mp3 }
-    else { .aamp 0 %mp3 }
-  }
-  .unset %mp3
-  .unset %mp3.cuangrande
-  .unset %mp3.posicion.punto
-  .unset %mp3.mostrar
-}
 
 alias mp3 {
-  .agentepensar Eso!!! La música es el espíritu de la vida!
   if ($1) {
     .set %mp3 $1-
   }
@@ -539,7 +321,6 @@ alias mp3 {
   .unset %cantidad
 }
 alias caemp3 {
-  .agentepensar Eso!!! La música es el espíritu de la vida!
   if ($1) {
     .set %mp3 $1-
   }
@@ -619,26 +400,15 @@ alias nicksgrab { .hadd nicksch $2 $1 }
 alias nicksbusc { return $iif($hget(nicksch,$1),$ifmatch) } 
 alias nosonido .splay stop
 alias o {
-  .agentepensar Aha! dando op!
   /mode # +ooooooo $1-
 }
-alias onotice { /onotice # %formatoops $1-  }
-alias ops { 
-  if (c isin $chan(#).mode) {
-    .raw notice @ $+ # : $+ %formatoops.bnegro $1-  | /echo -t # -> Ops # $+ : %formatoops.bnegro $1-
-  }
-  else {
-    /onotice $1-
-  }
+alias onotice { /ops $1-  }
+alias ops {
+  .raw notice @ $+ # : $+ %formatoops. $1-  | /echo -t # -> Ops # $+ : %formatoops $1-
 }
 alias ops2 { .raw notice @ $+ # : $+ %formatoops.bnegro $1-  | /echo -t # -> Ops # $+ : %formatoops.bnegro $1- }
 alias opsv { 
-  if (c isin $chan(#).mode) {
-    .raw notice @+ $+ # : $+ %formatoopsv.bnegro $1-  | /echo -t # -> Opsv # $+ : %formatoopsv.bnegro $1-
-  }
-  else {
-    .raw notice @+ $+ # : $+ %formatoopsv $1-  | /echo -t # -> Opsv # $+ : %formatoopsv $1-
-  }
+  .raw notice @+ $+ # : $+ %formatoopsv $1-  | /echo -t # -> Opsv # $+ : %formatoopsv $1-
 }
 alias opsv2 { .raw notice @+ $+ # : $+ %formatoopsv.bnegro $1-  | /echo # -> Opsv # $+ : %formatoopsv.bnegro $1- }
 alias part { 
@@ -656,7 +426,6 @@ alias p {
 alias piropo { 
   if ($1) { /say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ $1- $+ : $+ %color.titulo1 $+ ] $read( %filtropiropos ) }
   else { /say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ $input(Nick o #Canal,eq,CaeScript) $+ : $+ %color.titulo1 $+ ] $read( %filtropiropos }
-  .agentepensar Que lindo ...
 }
 alias player {
   if ($1) { /run " $+ $1- $+ " }
@@ -681,16 +450,13 @@ alias rn4 { say 6[2 $+ $snicks $+ 6]: $1- }
 alias rosa { 
   if ($1) { /me regala una rosa 4@3}>-3'--,-- a $1- }
   else { /me regala una rosa 4@3}>-3'--,-- a $input(Nick o #Canal,eq,CaeScript) }
-  .agentepensar Me late que alguien esta enamorado....
 }
 alias rose { 
   if ($1) { /me gives a rose 4@3}>-3'--,-- to $1- }
   else { /me gives a rose 4@3}>-3'--,-- to $input(Nick or #Channel,eq,CaeScript) }
-  .agentepensar I think someone is in love....
 } 
 alias s { /ban # $1 %tipoban | /kick # $1 Script.INI Lee el privado que te enviee para borrar este virus | .raw PRIVMSG $1 :Tienes el virus script.ini cargado en tu sistema. Estas ENVIANDO TODO LO QUE DICES Y TODOS TUS MENSAJES a un canal. Tambien estas enviando el archivo a todos sin darte cuenta. Por favor teclea los siguientes comandos AHORA 4//unload -rs script.ini luego 4//remove script.ini y luego ALT-F4 | .raw PRIVMSG $1 :Para mayor información ve a http://www.nohack.net/ http://www.dalnetayuda.org/ }
 alias saltar { 
-  .agentepensar Saltando un poquitin!
   if (%usarsonido == 1) {
     .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos salto
   }
@@ -715,17 +481,14 @@ alias superhola2 {
   unset %mostrar
 } 
 alias sf2 {
-  .agentepensar Si si, mejor lee el manual....
   /run $mircdir $+ caescript\caescript.chm
 }
 alias snd /sound # $1-
 alias so { 
-  .agentepensar Aha! quitando ops!
   /mode # -ooooooo $1-
 }
 alias sonido /sound $sfile($sound(wav), Escoge un sonido!, Tocar)
 alias sv {
-  .agentepensar Aha! quitando voice!
   /mode # -vvvvvvv $1-
 }
 alias tb /ban -u $+ $calc($1 *60) # $2 %tipoban | /kick # $2 $3-
@@ -1124,7 +887,6 @@ alias unirse .join $input(A qué canal deseas entrar?,eq,CaeScript)
 alias uptime .say  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ Uptime: $+ %color.titulo1 $+ ]10 Sistema $+  $+ : $uptime(system,1) 2-10 mIRC $version $+  $+ : $uptime(mirc,1) 
 alias dalusers /run http://users.dal.net/
 alias v {
-  .agentepensar Aha! dando voice!
   /mode # +vvvvvvv $1-
 }
 alias ver {
@@ -1134,10 +896,8 @@ alias ver {
   if ($active != Status Window ) {
     .say Estoy usando  $+ %color.titulo2 $+ mIRC $version $+  mejorado con  $+ %color.titulo2 $+ * $+ %color.titulo1 $+ * $+ %color.titulo2 %version.caescript  $+ %color.titulo1 $+ * $+ %color.titulo2 $+ *. Lo puedes obtener acá:  $+ %color.titulo2 $+ http://www.caespock.org/ircsoftware/ .
   }
-  .agentehablar %version.caescript -- El Mejor Script!
 }
 alias video {
-  .agentepensar Eso!!! Videos para alegrar la vista!
   if (%pathvideo) { %video = $sfile(%pathvideo, Escoge un video!, Reproducir) }
   else { %video = $sfile($sound(mp3), Escoge un video!, Reproducir) }
   if ( %video ) {
@@ -1385,11 +1145,9 @@ on *:OPEN:?:{
 }
 on *:CTCPREPLY:ping*:{
   .raw notice $nick :Tu respuesta ping es de $duration($calc($ctime - $2)) | echo -a  $+ %color.titulo1 $+ [ $+ %color.titulo2 $+ $nick PING Reply $+ %color.titulo1 $+ ] $duration($calc($ctime - $2))
-  .agentehablar Ping de $nick es $duration($calc($ctime - $2))
 }
 on *:TOPIC:*:{
   .set %canaltopic $right($chan,-1)
-  .agentehablar $nick ha cambiado el topic de %canaltopic
   .unset %canaltopic
 }
 on ^*:INVITE:#:{
@@ -1398,7 +1156,6 @@ on ^*:INVITE:#:{
     .splay $mircdir $+ caescript\temas\ $+ %tema $+ \ $+ $readini caescript\temas\ $+ %tema $+ \tema.ini sonidos invite
   }
   .set %canalinvitacion $right($chan,-1)
-  .agentehablar $nick te ha invitado a %canalinvitacion
   .unset %canalinvitacion
   .haltdef
 }
@@ -1434,7 +1191,6 @@ on ^*:UNOTIFY:{
 }
 on *:FILERCVD:*.jpg,*.gif,*.bmp,*.mid,*.wav,*.txt:{
   .echo 2 -a *** Se recibió $filename de $nick | .notice $nick Gracias por enviar $nopath($filename) | /run $filename
-  .agentehablar $nick te ha enviado un archivo exitosamente.
 }
 ON *:JOIN:#:{
   if ( $nick == $me ) {
